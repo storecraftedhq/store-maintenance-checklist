@@ -1,16 +1,4 @@
-=== Store Maintenance Checklist for WooCommerce ===
-Contributors: storecrafted
-Tags: woocommerce, checklist, maintenance, health, store
-Requires at least: 7.0
-Tested up to: 7.1
-Requires PHP: 8.1
-Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-
-Find and fix WooCommerce operational problems with a prioritized, evidence-backed maintenance checklist.
-
-== Description ==
+## Store Maintenance Checklist for WooCommerce
 
 Store Maintenance Checklist for WooCommerce helps merchants find and fix catalog, checkout, email, order, and environment issues before customers do.
 
@@ -20,7 +8,7 @@ It runs a hybrid scan (fast sync checks plus Action Scheduler catalog batches), 
 
 **This is not a maintenance-mode or coming-soon plugin.** It does not close your shop or hide the storefront. It is a recurring ops checklist you re-run after updates or on a monthly cadence.
 
-= Why store owners use it =
+## Why store owners use it
 
 * Catch checkout and payment blockers before shoppers hit them
 * Keep the catalog sellable (prices, downloads, stock, required pages)
@@ -29,7 +17,7 @@ It runs a hybrid scan (fast sync checks plus Action Scheduler catalog batches), 
 * Work from evidence and deep links, not vague health scores
 * Stay private: scans run on your site with no remote scan service or telemetry
 
-= What the scan checks (50 checks) =
+## What the scan checks (50 checks)
 
 **Catalog** — Missing or invalid prices, incomplete variation prices, missing images or descriptions, downloadable products without files, out-of-stock listings, missing or duplicate SKUs, virtual products that still require shipping, required WooCommerce pages, unpublished privacy/refunds pages, checkout page signals, and expired coupons still published.
 
@@ -43,7 +31,7 @@ It runs a hybrid scan (fast sync checks plus Action Scheduler catalog batches), 
 
 **Environment** — HTTPS off on production, debug display on production, plain permalinks, incomplete store address, fatal error logs, PHP/WordPress/database or memory below WooCommerce recommendations, available updates, Coming soon mode, unset currency/timezone, plus soft nudges to Site Health and WooCommerce Status.
 
-= What you get =
+## What you get
 
 * Prioritized findings (critical / warning / info) with plain-language explanations
 * Evidence counts and sample admin deep-links where useful
@@ -53,7 +41,7 @@ It runs a hybrid scan (fast sync checks plus Action Scheduler catalog batches), 
 
 The score is informational only (not a security, PCI, or legal certification). Use Critical findings first, then Warnings, then Info.
 
-= Requirements =
+## Requirements
 
 * WordPress 7.0+
 * PHP 8.1+
@@ -61,14 +49,14 @@ The score is informational only (not a security, PCI, or legal certification). U
 
 Author: [StoreCrafted](https://storecrafted.com)
 
-== Installation ==
+## Installation
 
 1. Upload the plugin files to `/wp-content/plugins/store-maintenance-checklist`, or install via Plugins → Add New.
 2. Activate the plugin through the Plugins screen (WooCommerce must be active).
 3. Go to **WooCommerce → Maintenance Checklist**.
 4. Run a scan and work through Critical findings first.
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions
 
 = Is this a maintenance mode plugin? =
 
@@ -93,18 +81,6 @@ Sync checks run quickly in the request. Catalog product checks use Action Schedu
 = Can I ignore findings I do not care about? =
 
 Yes. Ignore a finding with an optional reason. Ignored checks are excluded from the score and appear in History / CSV as ignored.
-
-== Screenshots ==
-
-1. Checklist overview with score, severity filters, and prioritized findings.
-2. Finding detail with evidence, primary free action, and optional further tools.
-3. Settings for production severity, further tools, and catalog scan bounds.
-4. About page clarifying that this is not a maintenance-mode plugin.
-
-== Changelog ==
-
-= 1.0.0 =
-* First public release for WordPress.org.
 
 == Upgrade Notice ==
 
