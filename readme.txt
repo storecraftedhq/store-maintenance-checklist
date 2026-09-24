@@ -61,6 +61,8 @@ The score is informational only (not a security, PCI, or legal certification). U
 
 Author: [StoreCrafted](https://storecrafted.com)
 
+Full Plugin Source: https://github.com/storecraftedhq/store-maintenance-checklist
+
 == Installation ==
 
 1. Upload the plugin files to `/wp-content/plugins/store-maintenance-checklist`, or install via Plugins → Add New.
