@@ -1,0 +1,34 @@
+{
+  "name": "store-maintenance-checklist",
+  "private": true,
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "lint": "wp-scripts lint-js",
+    "lint:js": "wp-scripts lint-js",
+    "test:js": "wp-scripts test-unit-js",
+    "packages-update": "wp-scripts packages-update",
+    "docker:up": "docker compose up -d && bash bin/docker-setup.sh",
+    "docker:stop": "docker compose stop",
+    "docker:clean": "docker compose down -v",
+    "docker:destroy": "docker compose down -v --rmi all",
+    "docker:logs": "docker compose logs -f wordpress",
+    "test:php": "vendor/bin/phpunit --configuration phpunit.xml.dist",
+    "phpcs": "composer run phpcs",
+    "phpcbf": "composer run phpcbf",
+    "create:pot": "mkdir -p languages && wp i18n make-pot . languages/store-maintenance-checklist.pot --domain=store-maintenance-checklist",
+    "build:zip": "bash bin/build-zip.sh",
+    "release:verify": "bash bin/verify-release.sh"
+  },
+  "dependencies": {
+    "@wordpress/api-fetch": "^7.56.0",
+    "@wordpress/components": "^30.0.0",
+    "@wordpress/dom-ready": "^4.56.0",
+    "@wordpress/element": "^6.0.0",
+    "@wordpress/i18n": "^5.0.0"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^30.21.0",
+    "typescript": "^5.9.3"
+  }
+}

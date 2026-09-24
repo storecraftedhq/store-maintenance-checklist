@@ -1,0 +1,1938 @@
+# Copyright (C) 2026 StoreCrafted
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Store Maintenance Checklist for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/store-maintenance-checklist\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-09-23T23:28:27+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: store-maintenance-checklist\n"
+
+#. Plugin Name of the plugin
+#: store-maintenance-checklist.php
+#: build/index.js:11
+#: src/pages/AboutPage.js:48
+msgid "Store Maintenance Checklist for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: store-maintenance-checklist.php
+msgid "https://storecrafted.com"
+msgstr ""
+
+#. Description of the plugin
+#: store-maintenance-checklist.php
+msgid "Find and fix WooCommerce operational problems with a prioritized, evidence-backed maintenance checklist."
+msgstr ""
+
+#. Author of the plugin
+#: store-maintenance-checklist.php
+msgid "StoreCrafted"
+msgstr ""
+
+#: includes/Admin/class-stmc-admin.php:29
+#: includes/Admin/class-stmc-admin.php:30
+#: build/index.js:1
+#: src/components/AppShell.js:53
+msgid "Maintenance Checklist"
+msgstr ""
+
+#: includes/Admin/class-stmc-admin.php:42
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#: includes/Api/class-stmc-api-permissions.php:27
+msgid "You do not have permission to manage the maintenance checklist."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-checkout-page-signal.php:29
+msgid "Checkout page may not be a valid checkout"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-checkout-page-signal.php:41
+msgid "The assigned checkout page may be empty or missing the checkout block/shortcode."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-checkout-page-signal.php:43
+msgid "Checkout page signal failed heuristics."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-checkout-page-signal.php:47
+msgid "Checkout"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-downloadable-missing-file.php:44
+msgid "Downloadable products missing files"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-duplicate-sku.php:29
+msgid "Duplicate SKUs in the catalog"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-expired-coupons-enabled.php:29
+msgid "Expired coupons still published"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-expired-coupons-enabled.php:39
+msgid "Expired coupons still published clutter marketing ops and confuse staff."
+msgstr ""
+
+#. translators: %d: coupon count
+#: includes/Checks/class-stmc-check-catalog-expired-coupons-enabled.php:43
+#, php-format
+msgid "%d expired coupons are still published."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-expired-coupons-enabled.php:49
+msgid "Coupons"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-incomplete-variation-prices.php:29
+msgid "Variable products with incomplete variation prices"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-missing-description.php:29
+msgid "Products missing a description"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-missing-featured-image.php:29
+msgid "Products missing a featured image"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-missing-price.php:29
+msgid "Products with missing or invalid prices"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-missing-short-description.php:29
+msgid "Products missing a short description"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-missing-sku.php:29
+msgid "Products missing a SKU"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-policy-pages-unpublished.php:32
+msgid "Privacy or refunds policy page not published"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-policy-pages-unpublished.php:37
+msgid "Privacy Policy"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-policy-pages-unpublished.php:38
+msgid "Refund and Returns Policy"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-policy-pages-unpublished.php:66
+msgid "Payment gateways and customers expect Privacy and Refunds policy pages to be publicly published."
+msgstr ""
+
+#. translators: %s: comma-separated page titles
+#: includes/Checks/class-stmc-check-catalog-policy-pages-unpublished.php:70
+#, php-format
+msgid "Not published: %s"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-policy-pages-unpublished.php:76
+msgid "Pages"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-required-pages.php:29
+msgid "Required WooCommerce pages missing or mis-assigned"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-required-pages.php:44
+msgid "Cart, checkout, or account pages are missing or not assigned in WooCommerce settings."
+msgstr ""
+
+#. translators: %s: comma-separated page keys
+#: includes/Checks/class-stmc-check-catalog-required-pages.php:48
+#, php-format
+msgid "Missing or unassigned pages: %s"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-required-pages.php:54
+msgid "Advanced"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-unsellable-stock.php:29
+msgid "Products marked out of stock"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-catalog-virtual-requires-shipping.php:29
+msgid "Virtual products still require shipping"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-customer-cancelled-disabled.php:29
+msgid "Customer “Cancelled order” email disabled"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-customer-cancelled-disabled.php:39
+msgid "Buyers may not be notified when an order is cancelled."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-customer-cancelled-disabled.php:41
+msgid "customer_cancelled_order enabled=false"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-customer-cancelled-disabled.php:44
+#: includes/Checks/class-stmc-check-email-customer-completed-disabled.php:44
+#: includes/Checks/class-stmc-check-email-customer-processing-disabled.php:44
+#: includes/Checks/class-stmc-check-email-customer-refunded-disabled.php:44
+#: includes/Checks/class-stmc-check-email-new-order-disabled.php:44
+#: includes/Checks/class-stmc-check-email-new-order-recipient-missing.php:63
+#: includes/Checks/class-stmc-check-email-weak-from-address.php:52
+msgid "Emails"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-customer-completed-disabled.php:29
+msgid "Customer “Completed order” email disabled"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-customer-completed-disabled.php:39
+msgid "Buyers may get no receipt when an order is completed."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-customer-completed-disabled.php:41
+msgid "customer_completed_order enabled=false"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-customer-processing-disabled.php:29
+msgid "Customer “Processing order” email disabled"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-customer-processing-disabled.php:39
+msgid "Buyers may get no order confirmation email."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-customer-processing-disabled.php:41
+msgid "customer_processing_order enabled=false"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-customer-refunded-disabled.php:29
+msgid "Customer “Refunded order” email disabled"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-customer-refunded-disabled.php:39
+msgid "Buyers may not be notified when an order is refunded."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-customer-refunded-disabled.php:41
+msgid "customer_refunded_order enabled=false"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-new-order-disabled.php:29
+msgid "Admin “New order” email disabled"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-new-order-disabled.php:39
+msgid "Merchants may miss new orders."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-new-order-disabled.php:41
+msgid "new_order enabled=false"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-new-order-recipient-missing.php:44
+msgid "New order recipient missing"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-new-order-recipient-missing.php:58
+msgid "New order alerts go nowhere without a recipient."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-new-order-recipient-missing.php:60
+msgid "New order recipient is empty."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-weak-from-address.php:29
+msgid "Order emails may use a weak From address"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-email-weak-from-address.php:43
+msgid "Addresses like wordpress@ often land in spam."
+msgstr ""
+
+#. translators: %s: from address
+#: includes/Checks/class-stmc-check-email-weak-from-address.php:47
+#, php-format
+msgid "Current From address: %s"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-coming-soon-enabled.php:29
+msgid "WooCommerce Coming soon mode is enabled"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-coming-soon-enabled.php:38
+msgid "Coming soon mode can hide the storefront from shoppers."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-coming-soon-enabled.php:40
+msgid "woocommerce_coming_soon is enabled."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-coming-soon-enabled.php:43
+#: includes/Checks/class-stmc-check-environment-https-off-production.php:51
+#: build/index.js:1
+#: build/index.js:4
+#: build/index.js:7
+#: src/components/Banners.js:68
+#: src/components/SidebarNav.js:21
+#: src/pages/ChecklistPage.js:284
+#: src/pages/SettingsPage.js:56
+msgid "Settings"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-currency-or-timezone-unset.php:29
+msgid "Store currency or site timezone is unset"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-currency-or-timezone-unset.php:43
+msgid "currency"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-currency-or-timezone-unset.php:46
+msgid "timezone"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-currency-or-timezone-unset.php:50
+msgid "Unset currency or timezone leads to wrong money display or order timestamps."
+msgstr ""
+
+#. translators: %s: comma-separated missing fields
+#: includes/Checks/class-stmc-check-environment-currency-or-timezone-unset.php:54
+#, php-format
+msgid "Unset: %s."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-currency-or-timezone-unset.php:59
+#: includes/Checks/class-stmc-check-environment-store-address-incomplete.php:61
+msgid "General"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-db-below-recommended.php:32
+msgid "Database version below WooCommerce recommendation"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-db-below-recommended.php:52
+msgid "WooCommerce recommends MySQL 8.0+ or MariaDB 10.6+ for security and performance."
+msgstr ""
+
+#. translators: 1: MySQL or MariaDB, 2: current version, 3: recommended minimum
+#: includes/Checks/class-stmc-check-environment-db-below-recommended.php:56
+#, php-format
+msgid "%1$s %2$s is below the recommended minimum of %3$s."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-db-below-recommended.php:63
+#: includes/Checks/class-stmc-check-environment-php-below-recommended.php:51
+#: includes/Checks/class-stmc-check-environment-wc-status-linkout.php:58
+msgid "Status"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-debug-display-production.php:29
+msgid "WP_DEBUG_DISPLAY enabled on production"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-debug-display-production.php:41
+msgid "Errors may be exposed to visitors when WP_DEBUG_DISPLAY is on."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-debug-display-production.php:43
+msgid "WP_DEBUG_DISPLAY is enabled."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-debug-display-production.php:46
+msgid "Hosting"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-fatal-error-logs.php:29
+msgid "WooCommerce fatal error logs present"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-fatal-error-logs.php:39
+msgid "Unresolved PHP fatals can break checkout and admin screens. Review and clear the fatal-errors log after fixing the cause."
+msgstr ""
+
+#. translators: %d: number of non-empty fatal-errors log files
+#: includes/Checks/class-stmc-check-environment-fatal-error-logs.php:43
+#, php-format
+msgid "%d non-empty fatal-errors log file(s) found."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-fatal-error-logs.php:48
+msgid "Logs"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-https-off-production.php:29
+msgid "Site not served over HTTPS"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-https-off-production.php:42
+msgid "Checkout and payments risk when the site is not served over HTTPS."
+msgstr ""
+
+#. translators: %s: home URL
+#: includes/Checks/class-stmc-check-environment-https-off-production.php:46
+#, php-format
+msgid "Home URL scheme is not HTTPS (%s)."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-memory-below-recommended.php:31
+msgid "WordPress memory limit below recommendation"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-memory-below-recommended.php:45
+msgid "WooCommerce recommends a WordPress memory limit of 256 MB or greater."
+msgstr ""
+
+#. translators: 1: current memory limit in MB, 2: recommended minimum in MB
+#: includes/Checks/class-stmc-check-environment-memory-below-recommended.php:49
+#, php-format
+msgid "WP_MEMORY_LIMIT is about %1$d MB (recommended minimum %2$d MB)."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-memory-below-recommended.php:55
+msgid "Guide"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-php-below-recommended.php:31
+msgid "PHP version below WooCommerce recommendation"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-php-below-recommended.php:41
+msgid "WooCommerce recommends PHP 8.3 or greater for security and extension compatibility."
+msgstr ""
+
+#. translators: 1: current PHP version, 2: recommended minimum
+#: includes/Checks/class-stmc-check-environment-php-below-recommended.php:45
+#, php-format
+msgid "PHP %1$s is below the recommended minimum of %2$s."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-plain-permalinks.php:29
+msgid "Pretty permalinks are disabled"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-plain-permalinks.php:39
+msgid "Plain ?p= URLs hurt shareability, caching, and common storefront setups."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-plain-permalinks.php:41
+msgid "Permalink structure is set to Plain (empty). Choose a pretty structure such as Post name."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-plain-permalinks.php:43
+msgid "Permalinks"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-site-health-linkout.php:29
+msgid "Review Site Health for environment details"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-site-health-linkout.php:35
+msgid "Also review Site Health for broader environment details."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-site-health-linkout.php:37
+msgid "Soft nudge to open Site Health."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-site-health-linkout.php:40
+msgid "Site Health"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-store-address-incomplete.php:29
+msgid "Store address is incomplete"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-store-address-incomplete.php:42
+msgid "address line 1"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-store-address-incomplete.php:45
+msgid "city"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-store-address-incomplete.php:48
+msgid "postcode"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-store-address-incomplete.php:52
+msgid "Tax and shipping rates use the store base location. A complete address keeps those settings reliable."
+msgstr ""
+
+#. translators: %s: comma-separated missing fields
+#: includes/Checks/class-stmc-check-environment-store-address-incomplete.php:56
+#, php-format
+msgid "Store address is missing: %s."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-updates-available.php:29
+msgid "WordPress or WooCommerce updates available"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-updates-available.php:40
+msgid "WordPress"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-updates-available.php:47
+msgid "Pending updates increase security and compatibility risk."
+msgstr ""
+
+#. translators: %s: comma-separated list of update targets
+#: includes/Checks/class-stmc-check-environment-updates-available.php:51
+#, php-format
+msgid "Updates available for: %s."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-updates-available.php:56
+#: includes/Checks/class-stmc-check-environment-wp-below-recommended.php:51
+msgid "Updates"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-wc-status-linkout.php:44
+msgid "Review WooCommerce Status for system details"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-wc-status-linkout.php:53
+msgid "Also review WooCommerce Status for DB updates, templates, and system details."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-wc-status-linkout.php:55
+msgid "Soft nudge to open WooCommerce Status."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-wp-below-recommended.php:31
+msgid "WordPress version below WooCommerce recommendation"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-environment-wp-below-recommended.php:41
+msgid "WooCommerce recommends WordPress 6.9 or greater for security and compatibility."
+msgstr ""
+
+#. translators: 1: current WordPress version, 2: recommended minimum
+#: includes/Checks/class-stmc-check-environment-wp-below-recommended.php:45
+#, php-format
+msgid "WordPress %1$s is below the recommended minimum of %2$s."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-aged-cancelled-volume.php:44
+msgid "Large volume of aged cancelled orders"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-aged-cancelled-volume.php:60
+msgid "Aged cancelled orders add ops clutter over time."
+msgstr ""
+
+#. translators: %d: order count
+#: includes/Checks/class-stmc-check-orders-aged-cancelled-volume.php:64
+#, php-format
+msgid "%d cancelled orders older than 24 months."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-aged-cancelled-volume.php:69
+#: includes/Checks/class-stmc-check-orders-aged-completed-volume.php:51
+#: includes/Checks/class-stmc-check-orders-stuck-failed.php:48
+#: includes/Checks/class-stmc-check-orders-stuck-on-hold.php:45
+#: includes/Checks/class-stmc-check-orders-stuck-pending.php:45
+#: build/index.js:3
+#: src/components/FindingsTable.js:18
+msgid "Orders"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-aged-cancelled-volume.php:74
+#: includes/Checks/class-stmc-check-orders-aged-completed-volume.php:56
+msgid "Auto Archive Old Orders for WooCommerce"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-aged-completed-volume.php:29
+msgid "Large volume of aged completed orders"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-aged-completed-volume.php:42
+msgid "Admin and report performance can suffer with large aged completed order volumes."
+msgstr ""
+
+#. translators: %d: order count
+#: includes/Checks/class-stmc-check-orders-aged-completed-volume.php:46
+#, php-format
+msgid "%d completed orders older than 24 months."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-failed-action-scheduler.php:29
+msgid "Failed Action Scheduler jobs"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-failed-action-scheduler.php:39
+msgid "Background work may be broken (emails, webhooks)."
+msgstr ""
+
+#. translators: %d: failed action count
+#: includes/Checks/class-stmc-check-orders-failed-action-scheduler.php:43
+#, php-format
+msgid "%d failed Action Scheduler jobs."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-failed-action-scheduler.php:48
+#: includes/Checks/class-stmc-check-orders-overdue-action-scheduler.php:48
+#: build/index.js:5
+#: src/components/Banners.js:150
+msgid "Scheduled Actions"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-hpos-compat-mode.php:29
+msgid "HPOS compatibility mode still enabled"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-hpos-compat-mode.php:38
+msgid "Compatibility mode adds dual-write cost and migration debt."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-hpos-compat-mode.php:40
+msgid "HPOS compatibility mode is enabled."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-hpos-compat-mode.php:43
+msgid "Features"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-overdue-action-scheduler.php:29
+msgid "Overdue pending Action Scheduler jobs"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-overdue-action-scheduler.php:39
+msgid "Cron or queue lag: pending actions past their scheduled date."
+msgstr ""
+
+#. translators: %d: overdue count
+#: includes/Checks/class-stmc-check-orders-overdue-action-scheduler.php:43
+#, php-format
+msgid "%d overdue pending Action Scheduler jobs."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-stuck-failed.php:32
+msgid "Orders stuck Failed"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-stuck-failed.php:42
+msgid "Unresolved payment failures: failed orders older than 7 days."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-stuck-failed.php:44
+msgid "failed orders older than 7 days."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-stuck-on-hold.php:29
+msgid "Orders stuck On hold"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-stuck-on-hold.php:39
+msgid "Fulfilment backlog: on-hold orders older than 7 days."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-stuck-on-hold.php:41
+msgid "on-hold orders older than 7 days."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-stuck-pending.php:29
+msgid "Orders stuck in Pending payment"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-stuck-pending.php:39
+msgid "Payment or ops backlog: pending payment orders older than 7 days."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-orders-stuck-pending.php:41
+msgid "pending payment orders older than 7 days."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-payments-gateway-test-mode.php:44
+msgid "Payment gateway in test / sandbox mode"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-payments-gateway-test-mode.php:66
+msgid "Live customers may not be charged while a gateway reports test/sandbox mode."
+msgstr ""
+
+#. translators: %s: gateway ids
+#: includes/Checks/class-stmc-check-payments-gateway-test-mode.php:70
+#, php-format
+msgid "Gateways in test mode: %s"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-payments-gateway-test-mode.php:76
+#: includes/Checks/class-stmc-check-payments-no-gateways.php:43
+#: build/index.js:3
+#: src/components/FindingsTable.js:15
+msgid "Payments"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-payments-no-gateways.php:29
+msgid "No enabled payment gateways"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-payments-no-gateways.php:38
+msgid "The store cannot take payment until at least one gateway is enabled."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-payments-no-gateways.php:40
+msgid "Enabled gateway count = 0"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-payments-taxes-enabled-no-rates.php:29
+msgid "Taxes enabled but no tax rates configured"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-payments-taxes-enabled-no-rates.php:38
+msgid "Tax calculation is turned on, but no rates exist for WooCommerce to apply."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-payments-taxes-enabled-no-rates.php:40
+msgid "woocommerce_calc_taxes is enabled and the tax rates table is empty."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-payments-taxes-enabled-no-rates.php:43
+msgid "Tax"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-shipping-empty-default-zone.php:29
+msgid "Default / catch-all shipping zone has no methods"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-shipping-empty-default-zone.php:43
+msgid "Unmatched locations cannot ship when the catch-all zone has no methods."
+msgstr ""
+
+#. translators: %s: zone name
+#: includes/Checks/class-stmc-check-shipping-empty-default-zone.php:47
+#, php-format
+msgid "Default zone \"%s\" has 0 methods."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-shipping-empty-default-zone.php:53
+#: includes/Checks/class-stmc-check-shipping-no-delivery-eta.php:50
+#: includes/Checks/class-stmc-check-shipping-no-methods-configured.php:47
+#: includes/Checks/class-stmc-check-shipping-zone-without-methods.php:76
+#: build/index.js:3
+#: src/components/FindingsTable.js:16
+msgid "Shipping"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-shipping-no-delivery-eta.php:29
+msgid "No delivery time messaging for physical shipping"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-shipping-no-delivery-eta.php:46
+msgid "Shoppers often abandon or contact support when physical shipping offers no delivery time guidance."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-shipping-no-delivery-eta.php:48
+msgid "Physical shipping methods are configured, but no delivery ETA or shipping-time messaging was detected."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-shipping-no-delivery-eta.php:55
+msgid "Expected Delivery Times for WooCommerce"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-shipping-no-methods-configured.php:29
+msgid "No shipping methods configured"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-shipping-no-methods-configured.php:42
+msgid "Physical checkout is often blocked when no shipping methods exist."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-shipping-no-methods-configured.php:44
+msgid "No shipping methods in any zone."
+msgstr ""
+
+#: includes/Checks/class-stmc-check-shipping-zone-without-methods.php:44
+msgid "One or more shipping zones have no methods"
+msgstr ""
+
+#: includes/Checks/class-stmc-check-shipping-zone-without-methods.php:66
+msgid "Regional checkout gaps occur when a zone has no shipping methods."
+msgstr ""
+
+#. translators: %s: zone names
+#: includes/Checks/class-stmc-check-shipping-zone-without-methods.php:70
+#, php-format
+msgid "Zones without methods: %s"
+msgstr ""
+
+#: includes/Checks/class-stmc-checks-registry.php:352
+msgid "Customers cannot complete purchase when prices are missing."
+msgstr ""
+
+#. translators: %d: product count
+#: includes/Checks/class-stmc-checks-registry.php:356
+#, php-format
+msgid "%d products with missing or invalid prices."
+msgstr ""
+
+#: includes/Checks/class-stmc-checks-registry.php:364
+#: includes/Checks/class-stmc-checks-registry.php:392
+#: includes/Checks/class-stmc-checks-registry.php:419
+#: includes/Checks/class-stmc-checks-registry.php:446
+#: includes/Checks/class-stmc-checks-registry.php:473
+#: includes/Checks/class-stmc-checks-registry.php:500
+#: includes/Checks/class-stmc-checks-registry.php:527
+#: includes/Checks/class-stmc-checks-registry.php:554
+#: includes/Checks/class-stmc-checks-registry.php:594
+#: includes/Checks/class-stmc-checks-registry.php:621
+msgid "Products"
+msgstr ""
+
+#: includes/Checks/class-stmc-checks-registry.php:380
+msgid "Shoppers hit unsellable variations when prices are incomplete."
+msgstr ""
+
+#. translators: %d: parent product count
+#: includes/Checks/class-stmc-checks-registry.php:384
+#, php-format
+msgid "%d variable products with incomplete variation prices."
+msgstr ""
+
+#: includes/Checks/class-stmc-checks-registry.php:407
+msgid "Missing featured images hurt trust and listings."
+msgstr ""
+
+#. translators: %d: product count
+#: includes/Checks/class-stmc-checks-registry.php:411
+#, php-format
+msgid "%d products missing a featured image."
+msgstr ""
+
+#: includes/Checks/class-stmc-checks-registry.php:434
+msgid "Empty product pages hurt trust, SEO, and support load."
+msgstr ""
+
+#. translators: %d: product count
+#: includes/Checks/class-stmc-checks-registry.php:438
+#, php-format
+msgid "%d products missing a description."
+msgstr ""
+
+#: includes/Checks/class-stmc-checks-registry.php:461
+msgid "Shop and archive cards often rely on the short description."
+msgstr ""
+
+#. translators: %d: product count
+#: includes/Checks/class-stmc-checks-registry.php:465
+#, php-format
+msgid "%d products missing a short description."
+msgstr ""
+
+#: includes/Checks/class-stmc-checks-registry.php:488
+msgid "Paid downloads fail after checkout when files are missing."
+msgstr ""
+
+#. translators: %d: product count
+#: includes/Checks/class-stmc-checks-registry.php:492
+#, php-format
+msgid "%d downloadable products missing files."
+msgstr ""
+
+#: includes/Checks/class-stmc-checks-registry.php:515
+msgid "Out-of-stock products cannot be purchased until restocked."
+msgstr ""
+
+#. translators: %d: product count
+#: includes/Checks/class-stmc-checks-registry.php:519
+#, php-format
+msgid "%d products marked out of stock."
+msgstr ""
+
+#: includes/Checks/class-stmc-checks-registry.php:542
+msgid "Missing SKUs make inventory sync and ops harder."
+msgstr ""
+
+#. translators: %d: product count
+#: includes/Checks/class-stmc-checks-registry.php:546
+#, php-format
+msgid "%d products missing a SKU."
+msgstr ""
+
+#: includes/Checks/class-stmc-checks-registry.php:582
+msgid "Duplicate SKUs cause inventory collisions and feed errors."
+msgstr ""
+
+#. translators: %d: number of duplicated SKU values
+#: includes/Checks/class-stmc-checks-registry.php:586
+#, php-format
+msgid "%d duplicate SKU values found."
+msgstr ""
+
+#: includes/Checks/class-stmc-checks-registry.php:609
+msgid "Virtual products that still require shipping confuse checkout tax and shipping."
+msgstr ""
+
+#. translators: %d: product count
+#: includes/Checks/class-stmc-checks-registry.php:613
+#, php-format
+msgid "%d virtual products still require shipping."
+msgstr ""
+
+#: includes/class-stmc-activator.php:23
+#: store-maintenance-checklist.php:52
+msgid "Store Maintenance Checklist for WooCommerce requires WooCommerce."
+msgstr ""
+
+#: includes/class-stmc-activator.php:24
+msgid "Plugin activation error"
+msgstr ""
+
+#: includes/Scan/class-stmc-scan-engine.php:100
+msgid "A scan is already in progress."
+msgstr ""
+
+#: includes/Scan/class-stmc-scan-engine.php:152
+#: includes/Scan/class-stmc-scan-engine.php:313
+msgid "Scanning products"
+msgstr ""
+
+#: includes/Scan/class-stmc-scan-engine.php:154
+#: includes/Scan/class-stmc-scan-engine.php:370
+msgid "Scanning variations"
+msgstr ""
+
+#: includes/Scan/class-stmc-scan-engine.php:155
+msgid "Finalizing"
+msgstr ""
+
+#: includes/Scan/class-stmc-scan-engine.php:195
+msgid "There is no active scan to cancel."
+msgstr ""
+
+#: includes/Scan/class-stmc-scan-engine.php:254
+#: includes/Scan/class-stmc-scan-engine.php:263
+msgid "There is no stalled scan to retry."
+msgstr ""
+
+#: includes/Scan/class-stmc-scan-engine.php:419
+msgid "Scan complete"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:6
+#: src/components/SidebarNav.js:11
+#: src/pages/ChecklistPage.js:157
+msgid "Checklist"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:5
+#: build/index.js:7
+#: build/index.js:8
+#: src/components/SidebarNav.js:32
+#: src/pages/ChecklistPage.js:122
+#: src/pages/ChecklistPage.js:294
+#: src/pages/HistoryPage.js:81
+msgid "History"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:11
+#: src/components/SidebarNav.js:43
+#: src/pages/AboutPage.js:39
+msgid "About"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/SidebarNav.js:63
+msgid "Plugin navigation"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/AppShell.js:35
+msgid "Back to Dashboard"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/AppShell.js:60
+msgid "Recurring ops checklist for catalog, checkout, email, and order health — not a maintenance-mode tool."
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:13
+#: build/index.js:14
+#: src/App.js:22
+#: src/App.js:40
+#: src/components/AppShell.js:75
+msgid "StoreCrafted · free on WordPress.org"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/MetricStrip.js:30
+msgid "Score is informational"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/MetricStrip.js:37
+msgid "Checklist score"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:5
+#: build/index.js:8
+#: build/index.js:11
+#: src/components/Banners.js:100
+#: src/components/MetricStrip.js:46
+#: src/pages/HistoryPage.js:125
+#: src/pages/HistoryPage.js:495
+msgid "Provisional"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/MetricStrip.js:54
+msgid "Not a security or PCI rating"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:4
+#: build/index.js:8
+#: src/components/FindingsTable.js:344
+#: src/components/MetricStrip.js:70
+#: src/pages/HistoryPage.js:283
+msgid "Open"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/MetricStrip.js:73
+msgid "All severities"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:3
+#: build/index.js:8
+#: src/components/FindingsTable.js:38
+#: src/components/MetricStrip.js:89
+#: src/pages/HistoryPage.js:289
+msgid "Critical"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/MetricStrip.js:92
+msgid "Fix first"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:3
+#: build/index.js:8
+#: src/components/FindingsTable.js:39
+#: src/components/MetricStrip.js:105
+#: src/pages/HistoryPage.js:295
+msgid "Warning"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/MetricStrip.js:108
+msgid "Ops risk"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:3
+#: build/index.js:8
+#: src/components/FindingsTable.js:40
+#: src/components/MetricStrip.js:121
+#: src/pages/HistoryPage.js:301
+msgid "Info"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/MetricStrip.js:124
+msgid "Hygiene"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/MetricStrip.js:136
+msgid "Scan summary"
+msgstr ""
+
+#: build/index.js:1
+#: build/index.js:3
+#: src/components/ScanProgress.js:26
+#: src/components/ScanProgress.js:80
+msgid "Scanning store…"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/ScanProgress.js:32
+msgid "Previous findings stay visible until complete"
+msgstr ""
+
+#. translators: 1: products scanned, 2: product bound
+#: build/index.js:2
+#: src/components/ScanProgress.js:43
+#, js-format
+msgid "~%1$s of %2$s products in this bound · previous findings stay visible until complete"
+msgstr ""
+
+#. translators: 1: current batch, 2: total batches
+#: build/index.js:3
+#: src/components/ScanProgress.js:56
+#, js-format
+msgid "Catalog batch %1$s of %2$s · Action Scheduler"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/ScanProgress.js:65
+msgid "Last batch completed 8+ minutes ago · Action Scheduler idle"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/ScanProgress.js:69
+msgid "WP-Cron may be delayed — findings below are from the last completed batches only"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/ScanProgress.js:76
+msgid "Scan waiting on background jobs…"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/ScanProgress.js:82
+msgid "Stalled"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/ScanProgress.js:83
+msgid "In progress"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/ScanProgress.js:90
+msgid "Scan in progress"
+msgstr ""
+
+#: build/index.js:3
+#: build/index.js:5
+#: build/index.js:6
+#: src/components/Banners.js:162
+#: src/components/ScanProgress.js:132
+#: src/pages/ChecklistPage.js:139
+msgid "Cancel scan"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/ScanProgress.js:135
+msgid "One scan at a time · cancel stops further batches"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:14
+msgid "Catalog"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:17
+msgid "Email"
+msgstr ""
+
+#: build/index.js:3
+#: build/index.js:8
+#: src/components/FindingsTable.js:19
+#: src/pages/HistoryPage.js:307
+msgid "Environment"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:23
+msgid "New"
+msgstr ""
+
+#: build/index.js:3
+#: build/index.js:8
+#: src/components/FindingsTable.js:24
+#: src/pages/HistoryPage.js:168
+msgid "Resolved"
+msgstr ""
+
+#: build/index.js:3
+#: build/index.js:11
+#: src/components/FindingsTable.js:25
+#: src/pages/HistoryPage.js:465
+msgid "Unchanged"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:26
+msgid "Worsened"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:35
+#: src/components/FindingsTable.js:136
+msgid "Ignored"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:88
+msgid "Findings"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:96
+msgid "Search findings…"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:100
+msgid "Search findings"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:109
+msgid "Filter by area"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:115
+msgid "All areas"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:127
+msgid "Filter by status"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:133
+msgid "Open findings"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:139
+msgid "Open + ignored"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:152
+msgid "Severity"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:158
+msgid "Finding"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:164
+msgid "Area"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:167
+msgid "Actions"
+msgstr ""
+
+#: build/index.js:3
+#: src/components/FindingsTable.js:178
+msgid "No findings match the current filters."
+msgstr ""
+
+#. translators: %s: ignore reason
+#: build/index.js:4
+#: src/components/FindingsTable.js:276
+#, js-format
+msgid "Reason: “%s”"
+msgstr ""
+
+#: build/index.js:4
+#: src/components/FindingsTable.js:288
+msgid "Optional further tools:"
+msgstr ""
+
+#: build/index.js:4
+#: src/components/FindingsTable.js:310
+msgid "Excluded from score"
+msgstr ""
+
+#: build/index.js:4
+#: src/components/FindingsTable.js:328
+msgid "Restore"
+msgstr ""
+
+#: build/index.js:4
+#: src/components/FindingsTable.js:355
+msgid "Ignore…"
+msgstr ""
+
+#: build/index.js:4
+#: src/components/EmptyState.js:16
+msgid "Empty state"
+msgstr ""
+
+#: build/index.js:4
+#: src/components/EmptyState.js:18
+msgid "No scan yet"
+msgstr ""
+
+#: build/index.js:4
+#: src/components/EmptyState.js:20
+msgid "Run a checklist scan to see prioritized findings. Scans stay on your site — no remote telemetry."
+msgstr ""
+
+#: build/index.js:4
+#: src/components/EmptyState.js:31
+msgid "Run first scan"
+msgstr ""
+
+#: build/index.js:4
+#: src/components/Banners.js:47
+msgid "Non-production environment"
+msgstr ""
+
+#: build/index.js:4
+#: src/components/Banners.js:55
+msgid "severities are relaxed. Force production scoring in Settings or via"
+msgstr ""
+
+#: build/index.js:4
+#: src/components/Banners.js:78
+msgid "Partial catalog scan"
+msgstr ""
+
+#. translators: 1: products scanned, 2: total products bound
+#: build/index.js:5
+#: src/components/Banners.js:88
+#, js-format
+msgid "Checked %1$s of %2$s products. Score is"
+msgstr ""
+
+#: build/index.js:5
+#: src/components/Banners.js:95
+msgid "Catalog scan was bounded. Score is"
+msgstr ""
+
+#: build/index.js:5
+#: src/components/Banners.js:105
+msgid "until a full bounded pass completes."
+msgstr ""
+
+#: build/index.js:5
+#: src/components/Banners.js:121
+msgid "Background jobs may be stalled"
+msgstr ""
+
+#: build/index.js:5
+#: src/components/Banners.js:127
+msgid "This scan is waiting on WooCommerce Action Scheduler, but no batch has completed recently. WP-Cron may be delayed on this host — open Scheduled Actions, or retry when cron is healthy."
+msgstr ""
+
+#: build/index.js:5
+#: src/components/Banners.js:140
+msgid "Retry / nudge"
+msgstr ""
+
+#: build/index.js:5
+#: src/components/Modal.js:69
+msgid "Close dialog"
+msgstr ""
+
+#: build/index.js:5
+#: src/components/Modal.js:92
+msgid "Close"
+msgstr ""
+
+#: build/index.js:5
+#: src/components/IgnoreFindingModal.js:9
+msgid "Expected for this store"
+msgstr ""
+
+#: build/index.js:5
+#: src/components/IgnoreFindingModal.js:41
+#: src/components/IgnoreFindingModal.js:61
+msgid "Ignore finding"
+msgstr ""
+
+#: build/index.js:5
+#: build/index.js:8
+#: src/components/IgnoreFindingModal.js:51
+#: src/pages/HistoryPage.js:374
+msgid "Cancel"
+msgstr ""
+
+#: build/index.js:5
+#: src/components/IgnoreFindingModal.js:60
+msgid "Ignoring…"
+msgstr ""
+
+#: build/index.js:5
+#: src/components/IgnoreFindingModal.js:71
+msgid "This check will be excluded from the score until you restore it."
+msgstr ""
+
+#: build/index.js:5
+#: src/components/IgnoreFindingModal.js:89
+msgid "Reason (optional)"
+msgstr ""
+
+#: build/index.js:5
+#: src/components/IgnoreFindingModal.js:101
+msgid "Shown on the ignored finding. Max 200 characters."
+msgstr ""
+
+#. translators: %s: HTTP status code
+#: build/index.js:6
+#: src/api/client.js:135
+#, js-format
+msgid "CSV export failed (HTTP %s)."
+msgstr ""
+
+#: build/index.js:6
+#: src/api/client.js:154
+msgid "Unexpected CSV export response."
+msgstr ""
+
+#: build/index.js:6
+#: src/pages/ChecklistPage.js:130
+msgid "Export CSV"
+msgstr ""
+
+#: build/index.js:6
+#: src/pages/ChecklistPage.js:149
+msgid "Scanning…"
+msgstr ""
+
+#: build/index.js:6
+#: src/pages/ChecklistPage.js:150
+msgid "Run scan"
+msgstr ""
+
+#: build/index.js:6
+#: src/pages/ChecklistPage.js:158
+msgid "Prioritized findings · score is secondary · ignored checks excluded"
+msgstr ""
+
+#: build/index.js:6
+#: src/pages/ChecklistPage.js:165
+msgid "Store health this scan"
+msgstr ""
+
+#: build/index.js:6
+#: src/pages/ChecklistPage.js:171
+msgid "Read-only checks for sellability, payments, shipping, email, and order ops. Fix paths use WooCommerce core first; optional tools appear only when relevant."
+msgstr ""
+
+#: build/index.js:6
+#: build/index.js:7
+#: build/index.js:8
+#: src/pages/ChecklistPage.js:181
+#: src/pages/HistoryPage.js:102
+#: src/pages/SettingsPage.js:77
+msgid "Error"
+msgstr ""
+
+#: build/index.js:6
+#: build/index.js:7
+#: build/index.js:8
+#: src/pages/ChecklistPage.js:190
+#: src/pages/HistoryPage.js:264
+#: src/pages/SettingsPage.js:99
+msgid "Loading…"
+msgstr ""
+
+#. translators: %d: number of passed checks
+#: build/index.js:7
+#: src/pages/ChecklistPage.js:255
+#, js-format
+msgid "%d checks passed"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/ChecklistPage.js:274
+msgid "Plugin links"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/ChecklistPage.js:304
+msgid "About StoreCrafted"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/ChecklistPage.js:311
+msgid "Score excludes ignored checks · Partial catalog scans are marked provisional · No outbound telemetry."
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:39
+msgid "Reset defaults"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:48
+msgid "Saving…"
+msgstr ""
+
+#: build/index.js:7
+#: build/index.js:8
+#: src/pages/SettingsPage.js:49
+#: src/pages/SettingsPage.js:358
+msgid "Save settings"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:57
+msgid "Severity overrides, scan bounds, and ignore housekeeping"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:64
+msgid "Scan behaviour"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:67
+msgid "Controls how severity is calculated and how large catalogs are scanned. Nothing here sends data off-site."
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:88
+msgid "Settings saved"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:107
+#: src/pages/SettingsPage.js:138
+msgid "Treat as production for scan severity"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:113
+msgid "Use full production severities even when WP_ENVIRONMENT_TYPE is local, development, or staging. Useful for QA on staging. Constant STMC_FORCE_PRODUCTION_SEVERITY overrides this when defined."
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:121
+msgid "Constant is currently defined."
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:154
+#: src/pages/SettingsPage.js:174
+msgid "Show further tools links"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:160
+msgid "When a finding has an optional StoreCrafted product, show a clearly labeled “Further tools” line after the free/core fix path."
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:189
+msgid "Catalog scan bounds"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:200
+msgid "Max products per scan"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:206
+msgid "Keeps admin requests predictable on large catalogs. Partial scans mark the score as provisional."
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:231
+msgid "Max variations per scan"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:237
+msgid "Applied after the product bound when checking incomplete variation prices."
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:262
+msgid "Developer override"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:270
+msgid "wp-config constant"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:276
+msgid "Add this to force production severities in local/CI without using the admin toggle."
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:289
+msgid "Filter"
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:295
+msgid "For PHPUnit and advanced customization."
+msgstr ""
+
+#: build/index.js:7
+#: src/pages/SettingsPage.js:309
+msgid "Ignored checks"
+msgstr ""
+
+#. translators: %d: ignored check count
+#: build/index.js:8
+#: src/pages/SettingsPage.js:320
+#, js-format
+msgid "%d ignored check on this site"
+msgid_plural "%d ignored checks on this site"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/index.js:8
+#: src/pages/SettingsPage.js:330
+msgid "Ignored checks are excluded from the score. Manage them on the Checklist with the Ignored filter."
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/SettingsPage.js:343
+msgid "Manage on Checklist"
+msgstr ""
+
+#: build/index.js:8
+#: build/index.js:12
+#: src/pages/AboutPage.js:239
+#: src/pages/SettingsPage.js:368
+msgid "Back to Checklist"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:67
+#: src/pages/HistoryPage.js:360
+#: src/pages/HistoryPage.js:387
+msgid "Clear history"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:74
+msgid "Open latest"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:82
+msgid "Last 5–10 scan summaries · New / Resolved / Unchanged vs previous run"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:89
+msgid "Recent scans"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:92
+msgid "Local summaries only — score, severity counts, environment mode, and change markers. Full finding payloads are not stored forever."
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:121
+msgid "Latest score"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:132
+msgid "No scans yet"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:148
+msgid "New findings"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:151
+msgid "Since previous scan"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:171
+msgid "No longer failing"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:183
+msgid "Stored runs"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:186
+msgid "Cap 10 · oldest dropped next"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:196
+msgid "Scan history"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:207
+msgid "Search by date or environment…"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:211
+msgid "Search history"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:220
+msgid "Filter by environment"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:226
+msgid "All environments"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:232
+msgid "Local"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:235
+msgid "Development"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:241
+msgid "Staging"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:244
+msgid "Production"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:252
+msgid "Compared to previous run"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:271
+msgid "When"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:277
+msgid "Score"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:313
+msgid "Changes"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:325
+msgid "No history entries yet."
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:352
+msgid "History is stored in plugin options on this site only. Clearing history does not change live findings or ignores."
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:383
+msgid "Clearing…"
+msgstr ""
+
+#: build/index.js:8
+#: src/pages/HistoryPage.js:396
+msgid "Clear stored scan summaries on this site? Live findings and ignores are not changed."
+msgstr ""
+
+#. translators: %d: new findings
+#: build/index.js:9
+#: src/pages/HistoryPage.js:425
+#, js-format
+msgid "%d new"
+msgstr ""
+
+#. translators: %d: resolved findings
+#: build/index.js:10
+#: src/pages/HistoryPage.js:439
+#, js-format
+msgid "%d resolved"
+msgstr ""
+
+#. translators: %d: worsened findings
+#: build/index.js:11
+#: src/pages/HistoryPage.js:453
+#, js-format
+msgid "%d worsened"
+msgstr ""
+
+#: build/index.js:11
+#: src/pages/HistoryPage.js:476
+msgid "Partial catalog"
+msgstr ""
+
+#: build/index.js:11
+#: src/pages/HistoryPage.js:477
+msgid "Full bounded pass"
+msgstr ""
+
+#: build/index.js:11
+#: src/pages/HistoryPage.js:482
+msgid "current"
+msgstr ""
+
+#: build/index.js:11
+#: src/pages/HistoryPage.js:520
+msgid "View"
+msgstr ""
+
+#: build/index.js:11
+#: src/pages/HistoryPage.js:524
+msgid "Summary"
+msgstr ""
+
+#: build/index.js:11
+#: src/pages/AboutPage.js:25
+msgid "storecrafted.com"
+msgstr ""
+
+#: build/index.js:11
+#: src/pages/AboutPage.js:32
+msgid "Open Checklist"
+msgstr ""
+
+#: build/index.js:11
+#: src/pages/AboutPage.js:40
+msgid "What this plugin is — and what it is not"
+msgstr ""
+
+#. translators: %s: brand name StoreCrafted
+#: build/index.js:12
+#: src/pages/AboutPage.js:56
+#, js-format
+msgid "A read-only ops checklist that helps merchants find catalog, checkout, email, and order issues before customers do. Built by %s. Free on WordPress.org."
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:68
+msgid "Not a maintenance-mode plugin"
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:74
+msgid "This does not close your shop, show a coming-soon page, or put WooCommerce in maintenance mode. It is a recurring checklist you re-run after updates or on a monthly cadence."
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:85
+msgid "Useful without StoreCrafted"
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:91
+msgid "Every finding includes a free/core fix path in WooCommerce or WordPress. You never need to buy anything to clear a Critical."
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:99
+msgid "Optional further tools"
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:105
+msgid "When a finding matches a StoreCrafted product, a clearly labeled optional link may appear — after the free remediation steps."
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:113
+msgid "Local & private"
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:119
+msgid "Scans run on your site. No remote scan service, no usage telemetry, no account required."
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:127
+msgid "Honest scoring"
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:133
+msgid "Ignored checks are excluded. Partial catalog scans are marked provisional. The score is secondary to findings — not a security rating."
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:142
+msgid "How recommendations work"
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:152
+msgid "Primary action"
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:158
+msgid "Always a WooCommerce / WordPress / hosting step you can take for free."
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:169
+msgid "Further tools (optional)"
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:175
+msgid "Only on matching findings — e.g. aged order debt may mention Auto Archive after core housekeeping."
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:186
+msgid "Never Critical for “plugin missing”"
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:192
+msgid "We will not raise severity because a StoreCrafted product is not installed."
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:202
+msgid "Also from StoreCrafted"
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:217
+msgid "Premium WooCommerce extensions"
+msgstr ""
+
+#: build/index.js:12
+#: src/pages/AboutPage.js:224
+msgid "Quantity rules, loyalty, LTV, invoices, order archive, delivery ETAs, and more."
+msgstr ""
+
+#. translators: %s: plugin version
+#: build/index.js:13
+#: src/pages/AboutPage.js:246
+#, js-format
+msgid "Version %s · PHP 8.1+ · WordPress 7.0+ · WooCommerce 10.0+ · Prefix stmc_"
+msgstr ""
+
+#. translators: 1: datetime, 2: environment type
+#: build/index.js:14
+#: src/App.js:35
+#, js-format
+msgid "Last scan · %1$s · %2$s"
+msgstr ""

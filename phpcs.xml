@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<ruleset name="Store Maintenance Checklist for WooCommerce">
+	<description>PHPCS using WordPress Coding Standards (free WP.org plugin, STMC_* classes)</description>
+
+	<config name="minimum_supported_wp_version" value="7.0"/>
+	<config name="testVersion" value="8.1-"/>
+
+	<rule ref="WordPress-Extra"/>
+
+	<!-- WooCommerce core capability used throughout this plugin. -->
+	<rule ref="WordPress.WP.Capabilities">
+		<properties>
+			<property name="custom_capabilities" type="array">
+				<element value="manage_woocommerce"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- PHPUnit class filenames stay PascalCase (*Test.php). -->
+	<rule ref="WordPress.Files.FileName">
+		<exclude-pattern>tests/phpunit/*</exclude-pattern>
+	</rule>
+
+	<rule ref="Squiz.Commenting.FileComment.Missing">
+		<exclude-pattern>includes/*</exclude-pattern>
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.ClassComment.Missing">
+		<exclude-pattern>includes/*</exclude-pattern>
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionComment.Missing">
+		<exclude-pattern>includes/*</exclude-pattern>
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionComment.MissingParamTag">
+		<exclude-pattern>includes/*</exclude-pattern>
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.VariableComment.Missing">
+		<exclude-pattern>includes/*</exclude-pattern>
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Generic.Commenting.DocComment.MissingShort">
+		<exclude-pattern>includes/*</exclude-pattern>
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+
+	<arg value="s"/>
+	<arg name="extensions" value="php"/>
+	<arg name="colors"/>
+
+	<file>store-maintenance-checklist.php</file>
+	<file>uninstall.php</file>
+	<file>includes</file>
+	<file>tests/phpunit</file>
+
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/build/*</exclude-pattern>
+	<exclude-pattern>tests/bootstrap.php</exclude-pattern>
+</ruleset>

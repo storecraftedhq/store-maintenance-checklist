@@ -1,0 +1,43 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Composer
+/auth.json
+
+# PHPUnit
+/.phpunit.cache/
+/phpunit.xml
+.phpunit.result.cache
+/coverage/
+/clover.xml
+
+# Build & release
+/dist/
+*.zip
+
+# Environment
+.env
+.env.*
+!.env.example
+/wp-tests-config.php
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs & local agent
+*.log
+/tmp/
+*.tmp
+.gstack/
+.claude/settings.local.json
+.cursor/settings.json
+.cursor/mcp.json

@@ -1,0 +1,29 @@
+{
+  "name": "storecrafted/store-maintenance-checklist",
+  "description": "Find and fix WooCommerce operational problems with a prioritized, evidence-backed maintenance checklist.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=8.1"
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+    "phpunit/phpunit": "^10.5",
+    "squizlabs/php_codesniffer": "^3.10",
+    "wp-coding-standards/wpcs": "^3.1"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    },
+    "platform": {
+      "php": "8.1.31"
+    }
+  },
+  "scripts": {
+    "phpcs": "phpcs",
+    "phpcbf": "phpcbf",
+    "phpunit": "phpunit --configuration phpunit.xml.dist",
+    "test": "phpunit --configuration phpunit.xml.dist"
+  }
+}

@@ -1,0 +1,63 @@
+# Used by bin/build-zip.sh (rsync --exclude-from). Paths relative to plugin root.
+
+# VCS & CI
+/.git/
+/.github/
+
+# Composer (dev-only; runtime uses SPL — never ship vendor/)
+/composer.json
+/composer.lock
+/vendor/
+
+# Node
+/node_modules/
+/package.json
+/package-lock.json
+/pnpm-lock.yaml
+/src/
+
+# Quality & tests
+/phpcs.xml
+/phpunit.xml.dist
+/phpunit.integration.xml.dist
+/.phpunit.cache/
+/phpunit.xml
+/tests/
+/coverage/
+/clover.xml
+/security-scan/
+
+# Local dev & docs
+/bin/
+/docker-compose.yml
+/docker-compose.yaml
+/dev-docs/
+/documentation/
+/AGENTS.md
+/CLAUDE.md
+/sales-copy.md
+/README.md
+/CHANGELOG.md
+/dist/
+/.gitignore
+/.distignore
+/.eslintrc.js
+/.eslintignore
+/.prettierrc
+/.prettierignore
+/.editorconfig
+/.npmrc
+/.nvmrc
+/wp-tests-config.php
+/.env
+/.env.*
+/.DS_Store
+**/.DS_Store
+**/.gitkeep
+
+# Agent / editor
+/.claude/
+/.cursor/
+/.gstack/
+/.idea/
+/.vscode/
