@@ -26,7 +26,7 @@ final class STMC_Check_Catalog_Unsellable_Stock extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'Products marked out of stock', 'store-maintenance-checklist' );
+		return __( 'Products marked out of stock', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {

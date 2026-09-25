@@ -26,7 +26,7 @@ if ( ! defined( 'STMC_PLUGIN_URL' ) ) {
 }
 
 if ( ! defined( 'STMC_TEXT_DOMAIN' ) ) {
-	define( 'STMC_TEXT_DOMAIN', 'store-maintenance-checklist' );
+	define( 'STMC_TEXT_DOMAIN', 'store-maintenance-checklist-for-woocommerce' );
 }
 
 if ( ! defined( 'STMC_URL_AUTO_ARCHIVE' ) ) {

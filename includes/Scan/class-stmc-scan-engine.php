@@ -97,7 +97,7 @@ final class STMC_Scan_Engine {
 		if ( ! empty( $current ) && 'running' === ( $current['state'] ?? '' ) ) {
 			return new WP_Error(
 				'stmc_scan_in_progress',
-				__( 'A scan is already in progress.', 'store-maintenance-checklist' ),
+				__( 'A scan is already in progress.', 'store-maintenance-checklist-for-woocommerce' ),
 				array( 'status' => 409 )
 			);
 		}
@@ -149,10 +149,10 @@ final class STMC_Scan_Engine {
 			'progress_percent' => 10,
 			'phase'            => $product_bound > 0 ? 'catalog' : ( $variation_bound > 0 ? 'variations' : 'finalize' ),
 			'phase_label'      => $product_bound > 0
-				? __( 'Scanning products', 'store-maintenance-checklist' )
+				? __( 'Scanning products', 'store-maintenance-checklist-for-woocommerce' )
 				: ( $variation_bound > 0
-					? __( 'Scanning variations', 'store-maintenance-checklist' )
-					: __( 'Finalizing', 'store-maintenance-checklist' ) ),
+					? __( 'Scanning variations', 'store-maintenance-checklist-for-woocommerce' )
+					: __( 'Finalizing', 'store-maintenance-checklist-for-woocommerce' ) ),
 			'batch_current'    => 0,
 			'batch_total'      => $batch_total,
 			'provisional'      => false,
@@ -192,7 +192,7 @@ final class STMC_Scan_Engine {
 		if ( empty( $state ) || 'running' !== ( $state['state'] ?? '' ) ) {
 			return new WP_Error(
 				'stmc_no_active_scan',
-				__( 'There is no active scan to cancel.', 'store-maintenance-checklist' ),
+				__( 'There is no active scan to cancel.', 'store-maintenance-checklist-for-woocommerce' ),
 				array( 'status' => 409 )
 			);
 		}
@@ -251,7 +251,7 @@ final class STMC_Scan_Engine {
 		if ( empty( $state ) || 'running' !== ( $state['state'] ?? '' ) ) {
 			return new WP_Error(
 				'stmc_no_active_scan',
-				__( 'There is no stalled scan to retry.', 'store-maintenance-checklist' ),
+				__( 'There is no stalled scan to retry.', 'store-maintenance-checklist-for-woocommerce' ),
 				array( 'status' => 409 )
 			);
 		}
@@ -260,7 +260,7 @@ final class STMC_Scan_Engine {
 		if ( ! $this->compute_stalled( $status ) ) {
 			return new WP_Error(
 				'stmc_no_active_scan',
-				__( 'There is no stalled scan to retry.', 'store-maintenance-checklist' ),
+				__( 'There is no stalled scan to retry.', 'store-maintenance-checklist-for-woocommerce' ),
 				array( 'status' => 409 )
 			);
 		}
@@ -310,7 +310,7 @@ final class STMC_Scan_Engine {
 		$now                       = gmdate( 'Y-m-d\TH:i:s\Z' );
 		$state['working']          = $working;
 		$state['phase']            = 'catalog';
-		$state['phase_label']      = __( 'Scanning products', 'store-maintenance-checklist' );
+		$state['phase_label']      = __( 'Scanning products', 'store-maintenance-checklist-for-woocommerce' );
 		$state['updated_at']       = $now;
 		$state['last_batch_at']    = $now;
 		$state['batch_current']    = (int) ( $working['batches_completed'] ?? 0 );
@@ -367,7 +367,7 @@ final class STMC_Scan_Engine {
 		$now                       = gmdate( 'Y-m-d\TH:i:s\Z' );
 		$state['working']          = $working;
 		$state['phase']            = 'variations';
-		$state['phase_label']      = __( 'Scanning variations', 'store-maintenance-checklist' );
+		$state['phase_label']      = __( 'Scanning variations', 'store-maintenance-checklist-for-woocommerce' );
 		$state['updated_at']       = $now;
 		$state['last_batch_at']    = $now;
 		$state['batch_current']    = (int) ( $working['batches_completed'] ?? 0 );
@@ -416,7 +416,7 @@ final class STMC_Scan_Engine {
 				'state'            => 'completed',
 				'progress_percent' => 100,
 				'phase'            => 'done',
-				'phase_label'      => __( 'Scan complete', 'store-maintenance-checklist' ),
+				'phase_label'      => __( 'Scan complete', 'store-maintenance-checklist-for-woocommerce' ),
 				'updated_at'       => $now,
 				'last_batch_at'    => $now,
 				'stalled'          => false,

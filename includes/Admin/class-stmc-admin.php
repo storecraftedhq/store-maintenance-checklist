@@ -26,8 +26,8 @@ final class STMC_Admin {
 	public function register_menu(): void {
 		add_submenu_page(
 			'woocommerce',
-			__( 'Maintenance Checklist', 'store-maintenance-checklist' ),
-			__( 'Maintenance Checklist', 'store-maintenance-checklist' ),
+			__( 'Maintenance Checklist', 'store-maintenance-checklist-for-woocommerce' ),
+			__( 'Maintenance Checklist', 'store-maintenance-checklist-for-woocommerce' ),
 			'manage_woocommerce',
 			'stmc',
 			array( $this, 'render_page' )
@@ -39,7 +39,7 @@ final class STMC_Admin {
 	 */
 	public function render_page(): void {
 		if ( ! current_user_can( 'manage_woocommerce' ) ) {
-			wp_die( esc_html__( 'You do not have permission to access this page.', 'store-maintenance-checklist' ) );
+			wp_die( esc_html__( 'You do not have permission to access this page.', 'store-maintenance-checklist-for-woocommerce' ) );
 		}
 
 		echo '<div id="stmc-admin-root" class="stmc-admin-root"></div>';
@@ -88,7 +88,7 @@ final class STMC_Admin {
 
 		wp_set_script_translations(
 			'stmc-admin',
-			'store-maintenance-checklist',
+			'store-maintenance-checklist-for-woocommerce',
 			STMC_PLUGIN_DIR . 'languages'
 		);
 

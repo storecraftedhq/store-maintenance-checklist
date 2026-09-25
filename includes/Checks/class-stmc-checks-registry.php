@@ -349,11 +349,11 @@ final class STMC_Checks_Registry {
 				? STMC_Finding::from_check(
 					$check,
 					'open',
-					__( 'Customers cannot complete purchase when prices are missing.', 'store-maintenance-checklist' ),
+					__( 'Customers cannot complete purchase when prices are missing.', 'store-maintenance-checklist-for-woocommerce' ),
 					array(
 						'summary' => sprintf(
 							/* translators: %d: product count */
-							__( '%d products with missing or invalid prices.', 'store-maintenance-checklist' ),
+							__( '%d products with missing or invalid prices.', 'store-maintenance-checklist-for-woocommerce' ),
 							$missing
 						),
 						'count'   => $missing,
@@ -361,7 +361,7 @@ final class STMC_Checks_Registry {
 					),
 					array(
 						'primary_action' => array(
-							'label' => __( 'Products', 'store-maintenance-checklist' ),
+							'label' => __( 'Products', 'store-maintenance-checklist-for-woocommerce' ),
 							'url'   => rtrim( $snap->admin_url, '/' ) . '/edit.php?post_type=product',
 						),
 					)
@@ -377,11 +377,11 @@ final class STMC_Checks_Registry {
 				? STMC_Finding::from_check(
 					$check,
 					'open',
-					__( 'Shoppers hit unsellable variations when prices are incomplete.', 'store-maintenance-checklist' ),
+					__( 'Shoppers hit unsellable variations when prices are incomplete.', 'store-maintenance-checklist-for-woocommerce' ),
 					array(
 						'summary' => sprintf(
 							/* translators: %d: parent product count */
-							__( '%d variable products with incomplete variation prices.', 'store-maintenance-checklist' ),
+							__( '%d variable products with incomplete variation prices.', 'store-maintenance-checklist-for-woocommerce' ),
 							$count
 						),
 						'count'   => $count,
@@ -389,7 +389,7 @@ final class STMC_Checks_Registry {
 					),
 					array(
 						'primary_action' => array(
-							'label' => __( 'Products', 'store-maintenance-checklist' ),
+							'label' => __( 'Products', 'store-maintenance-checklist-for-woocommerce' ),
 							'url'   => rtrim( $snap->admin_url, '/' ) . '/edit.php?post_type=product',
 						),
 					)
@@ -404,11 +404,11 @@ final class STMC_Checks_Registry {
 				? STMC_Finding::from_check(
 					$check,
 					'open',
-					__( 'Missing featured images hurt trust and listings.', 'store-maintenance-checklist' ),
+					__( 'Missing featured images hurt trust and listings.', 'store-maintenance-checklist-for-woocommerce' ),
 					array(
 						'summary' => sprintf(
 							/* translators: %d: product count */
-							__( '%d products missing a featured image.', 'store-maintenance-checklist' ),
+							__( '%d products missing a featured image.', 'store-maintenance-checklist-for-woocommerce' ),
 							$images
 						),
 						'count'   => $images,
@@ -416,7 +416,7 @@ final class STMC_Checks_Registry {
 					),
 					array(
 						'primary_action' => array(
-							'label' => __( 'Products', 'store-maintenance-checklist' ),
+							'label' => __( 'Products', 'store-maintenance-checklist-for-woocommerce' ),
 							'url'   => rtrim( $snap->admin_url, '/' ) . '/edit.php?post_type=product',
 						),
 					)
@@ -431,11 +431,11 @@ final class STMC_Checks_Registry {
 				? STMC_Finding::from_check(
 					$check,
 					'open',
-					__( 'Empty product pages hurt trust, SEO, and support load.', 'store-maintenance-checklist' ),
+					__( 'Empty product pages hurt trust, SEO, and support load.', 'store-maintenance-checklist-for-woocommerce' ),
 					array(
 						'summary' => sprintf(
 							/* translators: %d: product count */
-							__( '%d products missing a description.', 'store-maintenance-checklist' ),
+							__( '%d products missing a description.', 'store-maintenance-checklist-for-woocommerce' ),
 							$descriptions
 						),
 						'count'   => $descriptions,
@@ -443,7 +443,7 @@ final class STMC_Checks_Registry {
 					),
 					array(
 						'primary_action' => array(
-							'label' => __( 'Products', 'store-maintenance-checklist' ),
+							'label' => __( 'Products', 'store-maintenance-checklist-for-woocommerce' ),
 							'url'   => rtrim( $snap->admin_url, '/' ) . '/edit.php?post_type=product',
 						),
 					)
@@ -458,11 +458,11 @@ final class STMC_Checks_Registry {
 				? STMC_Finding::from_check(
 					$check,
 					'open',
-					__( 'Shop and archive cards often rely on the short description.', 'store-maintenance-checklist' ),
+					__( 'Shop and archive cards often rely on the short description.', 'store-maintenance-checklist-for-woocommerce' ),
 					array(
 						'summary' => sprintf(
 							/* translators: %d: product count */
-							__( '%d products missing a short description.', 'store-maintenance-checklist' ),
+							__( '%d products missing a short description.', 'store-maintenance-checklist-for-woocommerce' ),
 							$short_descriptions
 						),
 						'count'   => $short_descriptions,
@@ -470,7 +470,7 @@ final class STMC_Checks_Registry {
 					),
 					array(
 						'primary_action' => array(
-							'label' => __( 'Products', 'store-maintenance-checklist' ),
+							'label' => __( 'Products', 'store-maintenance-checklist-for-woocommerce' ),
 							'url'   => rtrim( $snap->admin_url, '/' ) . '/edit.php?post_type=product',
 						),
 					)
@@ -485,11 +485,11 @@ final class STMC_Checks_Registry {
 				? STMC_Finding::from_check(
 					$check,
 					'open',
-					__( 'Paid downloads fail after checkout when files are missing.', 'store-maintenance-checklist' ),
+					__( 'Paid downloads fail after checkout when files are missing.', 'store-maintenance-checklist-for-woocommerce' ),
 					array(
 						'summary' => sprintf(
 							/* translators: %d: product count */
-							__( '%d downloadable products missing files.', 'store-maintenance-checklist' ),
+							__( '%d downloadable products missing files.', 'store-maintenance-checklist-for-woocommerce' ),
 							$downloads
 						),
 						'count'   => $downloads,
@@ -497,7 +497,7 @@ final class STMC_Checks_Registry {
 					),
 					array(
 						'primary_action' => array(
-							'label' => __( 'Products', 'store-maintenance-checklist' ),
+							'label' => __( 'Products', 'store-maintenance-checklist-for-woocommerce' ),
 							'url'   => rtrim( $snap->admin_url, '/' ) . '/edit.php?post_type=product',
 						),
 					)
@@ -512,11 +512,11 @@ final class STMC_Checks_Registry {
 				? STMC_Finding::from_check(
 					$check,
 					'open',
-					__( 'Out-of-stock products cannot be purchased until restocked.', 'store-maintenance-checklist' ),
+					__( 'Out-of-stock products cannot be purchased until restocked.', 'store-maintenance-checklist-for-woocommerce' ),
 					array(
 						'summary' => sprintf(
 							/* translators: %d: product count */
-							__( '%d products marked out of stock.', 'store-maintenance-checklist' ),
+							__( '%d products marked out of stock.', 'store-maintenance-checklist-for-woocommerce' ),
 							$oos
 						),
 						'count'   => $oos,
@@ -524,7 +524,7 @@ final class STMC_Checks_Registry {
 					),
 					array(
 						'primary_action' => array(
-							'label' => __( 'Products', 'store-maintenance-checklist' ),
+							'label' => __( 'Products', 'store-maintenance-checklist-for-woocommerce' ),
 							'url'   => rtrim( $snap->admin_url, '/' ) . '/edit.php?post_type=product',
 						),
 					)
@@ -539,11 +539,11 @@ final class STMC_Checks_Registry {
 				? STMC_Finding::from_check(
 					$check,
 					'open',
-					__( 'Missing SKUs make inventory sync and ops harder.', 'store-maintenance-checklist' ),
+					__( 'Missing SKUs make inventory sync and ops harder.', 'store-maintenance-checklist-for-woocommerce' ),
 					array(
 						'summary' => sprintf(
 							/* translators: %d: product count */
-							__( '%d products missing a SKU.', 'store-maintenance-checklist' ),
+							__( '%d products missing a SKU.', 'store-maintenance-checklist-for-woocommerce' ),
 							$missing_sku
 						),
 						'count'   => $missing_sku,
@@ -551,7 +551,7 @@ final class STMC_Checks_Registry {
 					),
 					array(
 						'primary_action' => array(
-							'label' => __( 'Products', 'store-maintenance-checklist' ),
+							'label' => __( 'Products', 'store-maintenance-checklist-for-woocommerce' ),
 							'url'   => rtrim( $snap->admin_url, '/' ) . '/edit.php?post_type=product',
 						),
 					)
@@ -579,11 +579,11 @@ final class STMC_Checks_Registry {
 				? STMC_Finding::from_check(
 					$check,
 					'open',
-					__( 'Duplicate SKUs cause inventory collisions and feed errors.', 'store-maintenance-checklist' ),
+					__( 'Duplicate SKUs cause inventory collisions and feed errors.', 'store-maintenance-checklist-for-woocommerce' ),
 					array(
 						'summary' => sprintf(
 							/* translators: %d: number of duplicated SKU values */
-							__( '%d duplicate SKU values found.', 'store-maintenance-checklist' ),
+							__( '%d duplicate SKU values found.', 'store-maintenance-checklist-for-woocommerce' ),
 							$dup_count
 						),
 						'count'   => $dup_count,
@@ -591,7 +591,7 @@ final class STMC_Checks_Registry {
 					),
 					array(
 						'primary_action' => array(
-							'label' => __( 'Products', 'store-maintenance-checklist' ),
+							'label' => __( 'Products', 'store-maintenance-checklist-for-woocommerce' ),
 							'url'   => rtrim( $snap->admin_url, '/' ) . '/edit.php?post_type=product',
 						),
 					)
@@ -606,11 +606,11 @@ final class STMC_Checks_Registry {
 				? STMC_Finding::from_check(
 					$check,
 					'open',
-					__( 'Virtual products that still require shipping confuse checkout tax and shipping.', 'store-maintenance-checklist' ),
+					__( 'Virtual products that still require shipping confuse checkout tax and shipping.', 'store-maintenance-checklist-for-woocommerce' ),
 					array(
 						'summary' => sprintf(
 							/* translators: %d: product count */
-							__( '%d virtual products still require shipping.', 'store-maintenance-checklist' ),
+							__( '%d virtual products still require shipping.', 'store-maintenance-checklist-for-woocommerce' ),
 							$virtual_ship
 						),
 						'count'   => $virtual_ship,
@@ -618,7 +618,7 @@ final class STMC_Checks_Registry {
 					),
 					array(
 						'primary_action' => array(
-							'label' => __( 'Products', 'store-maintenance-checklist' ),
+							'label' => __( 'Products', 'store-maintenance-checklist-for-woocommerce' ),
 							'url'   => rtrim( $snap->admin_url, '/' ) . '/edit.php?post_type=product',
 						),
 					)

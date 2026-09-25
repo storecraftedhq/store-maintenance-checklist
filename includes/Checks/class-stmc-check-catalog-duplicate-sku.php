@@ -26,7 +26,7 @@ final class STMC_Check_Catalog_Duplicate_Sku extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'Duplicate SKUs in the catalog', 'store-maintenance-checklist' );
+		return __( 'Duplicate SKUs in the catalog', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {

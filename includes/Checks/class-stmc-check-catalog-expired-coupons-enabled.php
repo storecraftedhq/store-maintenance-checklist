@@ -26,7 +26,7 @@ final class STMC_Check_Catalog_Expired_Coupons_Enabled extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'Expired coupons still published', 'store-maintenance-checklist' );
+		return __( 'Expired coupons still published', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -36,17 +36,17 @@ final class STMC_Check_Catalog_Expired_Coupons_Enabled extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Expired coupons still published clutter marketing ops and confuse staff.', 'store-maintenance-checklist' ),
+			__( 'Expired coupons still published clutter marketing ops and confuse staff.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: %d: coupon count */
-					__( '%d expired coupons are still published.', 'store-maintenance-checklist' ),
+					__( '%d expired coupons are still published.', 'store-maintenance-checklist-for-woocommerce' ),
 					$count
 				),
 				'count'   => $count,
 				'samples' => $this->coupon_samples( $snapshot->expired_enabled_coupon_samples, $snapshot->admin_url ),
 			),
-			__( 'Coupons', 'store-maintenance-checklist' ),
+			__( 'Coupons', 'store-maintenance-checklist-for-woocommerce' ),
 			'edit.php?post_type=shop_coupon'
 		);
 	}

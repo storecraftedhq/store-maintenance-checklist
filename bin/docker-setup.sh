@@ -8,6 +8,9 @@ set -e
 
 WP_CONTAINER=${1:-store-maintenance-checklist-wordpress}
 SITE_URL=${WP_URL:-"localhost:8888"}
+# Install / mount slug must match WP.org + text domain (repo folder may differ).
+PLUGIN_SLUG="store-maintenance-checklist-for-woocommerce"
+LEGACY_PLUGIN_SLUG="store-maintenance-checklist"
 GEN_DATE_START=${GEN_DATE_START:-2023-01-01}
 GEN_DATE_END=${GEN_DATE_END:-2026-04-22}
 # Extra aged batch (older than 3 years) for orders.aged_* checks / archive demos.
@@ -44,6 +47,16 @@ cli() {
         wordpress:cli "$@"
 }
 
+print_ready() {
+    echo
+    echo "Environment is ready."
+    echo "WordPress:   http://${SITE_URL}/wp-admin/  (admin / password)"
+    echo "Mailpit:     http://localhost:${MAILPIT_UI_PORT:-8025}/"
+    echo "phpMyAdmin:  http://localhost:${PHPMYADMIN_PORT:-8080}/  (root / password)"
+    echo "Plugin Check: Tools → Plugin Check, or: wp plugin check ${PLUGIN_SLUG}"
+    echo "Query Monitor: toolbar when logged in as admin (dev profiling only)"
+}
+
 echo "Waiting for database to be ready..."
 until docker exec store-maintenance-checklist-mysql mysqladmin ping -h localhost -u root -ppassword --silent 2>/dev/null; do
     echo "  Not ready yet, retrying in 3s..."
@@ -58,15 +71,20 @@ until docker exec "$WP_CONTAINER" test -f /var/www/html/wp-includes/version.php 
 done
 echo "WordPress is ready."
 
-if cli wp plugin is-active store-maintenance-checklist --path=/var/www/html; then
-    echo
-    echo "Environment is already set up."
-    echo "WordPress:   http://${SITE_URL}/wp-admin/  (admin / password)"
-    echo "Mailpit:     http://localhost:${MAILPIT_UI_PORT:-8025}/"
-    echo "phpMyAdmin:  http://localhost:${PHPMYADMIN_PORT:-8080}/  (root / password)"
-    echo "Plugin Check: Tools → Plugin Check, or: wp plugin check store-maintenance-checklist"
-    echo "Query Monitor: toolbar when logged in as admin (dev profiling only)"
-    exit 0
+# Migrate legacy short-folder installs → WP.org slug mount.
+if cli wp core is-installed --path=/var/www/html; then
+    if cli wp plugin is-active "$LEGACY_PLUGIN_SLUG" --path=/var/www/html; then
+        echo "Deactivating legacy plugin folder (${LEGACY_PLUGIN_SLUG})..."
+        cli wp plugin deactivate "$LEGACY_PLUGIN_SLUG" --path=/var/www/html || true
+    fi
+    if docker exec "$WP_CONTAINER" test -f "/var/www/html/wp-content/plugins/${PLUGIN_SLUG}/store-maintenance-checklist.php"; then
+        echo "Activating ${PLUGIN_SLUG}..."
+        cli wp plugin activate "$PLUGIN_SLUG" --path=/var/www/html || true
+    fi
+    if cli wp plugin is-active "$PLUGIN_SLUG" --path=/var/www/html; then
+        print_ready
+        exit 0
+    fi
 fi
 
 echo
@@ -100,8 +118,8 @@ cli wp plugin install plugin-check --activate --path=/var/www/html
 echo "Installing Query Monitor (dev tool — not shipped in plugin ZIP)..."
 cli wp plugin install query-monitor --activate --path=/var/www/html
 
-echo "Activating store-maintenance-checklist..."
-cli wp plugin activate store-maintenance-checklist --path=/var/www/html
+echo "Activating ${PLUGIN_SLUG}..."
+cli wp plugin activate "$PLUGIN_SLUG" --path=/var/www/html
 
 echo "Configuring WordPress location settings..."
 cli wp option update timezone_string "America/New_York" --path=/var/www/html
@@ -119,7 +137,7 @@ cli wp wc generate orders 100 \
 
 echo "Generating aged orders (${AGED_GEN_START}–${AGED_GEN_END}, ${AGED_GEN_COUNT})..."
 # Prefer CRUD over wc-smooth-generator here: Faker can fatal without PHP intl.
-cli wp eval-file /var/www/html/wp-content/plugins/store-maintenance-checklist/bin/seed-aged-orders.php \
+cli wp eval-file "/var/www/html/wp-content/plugins/${PLUGIN_SLUG}/bin/seed-aged-orders.php" \
     "${AGED_GEN_COUNT}" "${AGED_GEN_START}" "${AGED_GEN_END}" \
     --path=/var/www/html
 
@@ -131,5 +149,5 @@ echo "phpMyAdmin:  http://localhost:${PHPMYADMIN_PORT:-8080}/  (root / password)
 echo
 echo "Dev tools (local only — never ship in the plugin ZIP):"
 echo "  Plugin Check:  Tools → Plugin Check"
-echo "                 or: wp plugin check store-maintenance-checklist"
+echo "                 or: wp plugin check ${PLUGIN_SLUG}"
 echo "  Query Monitor: admin toolbar when logged in"

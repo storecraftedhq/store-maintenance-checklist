@@ -26,7 +26,7 @@ final class STMC_Check_Catalog_Virtual_Requires_Shipping extends STMC_Check_Base
 	}
 
 	public function title(): string {
-		return __( 'Virtual products still require shipping', 'store-maintenance-checklist' );
+		return __( 'Virtual products still require shipping', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {

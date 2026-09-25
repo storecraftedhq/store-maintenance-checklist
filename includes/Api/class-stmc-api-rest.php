@@ -295,7 +295,7 @@ final class STMC_Api_Rest {
 
 		return new WP_Error(
 			'stmc_unknown_check',
-			__( 'Unknown check id.', 'store-maintenance-checklist' ),
+			__( 'Unknown check id.', 'store-maintenance-checklist-for-woocommerce' ),
 			array( 'status' => 404 )
 		);
 	}

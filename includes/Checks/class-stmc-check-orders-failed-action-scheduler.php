@@ -26,7 +26,7 @@ final class STMC_Check_Orders_Failed_Action_Scheduler extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'Failed Action Scheduler jobs', 'store-maintenance-checklist' );
+		return __( 'Failed Action Scheduler jobs', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -36,16 +36,16 @@ final class STMC_Check_Orders_Failed_Action_Scheduler extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Background work may be broken (emails, webhooks).', 'store-maintenance-checklist' ),
+			__( 'Background work may be broken (emails, webhooks).', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: %d: failed action count */
-					__( '%d failed Action Scheduler jobs.', 'store-maintenance-checklist' ),
+					__( '%d failed Action Scheduler jobs.', 'store-maintenance-checklist-for-woocommerce' ),
 					$count
 				),
 				'count'   => $count,
 			),
-			__( 'Scheduled Actions', 'store-maintenance-checklist' ),
+			__( 'Scheduled Actions', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-status&tab=action-scheduler&status=failed'
 		);
 	}

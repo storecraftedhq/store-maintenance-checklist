@@ -26,7 +26,7 @@ final class STMC_Check_Catalog_Checkout_Page_Signal extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'Checkout page may not be a valid checkout', 'store-maintenance-checklist' );
+		return __( 'Checkout page may not be a valid checkout', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -38,13 +38,13 @@ final class STMC_Check_Catalog_Checkout_Page_Signal extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'The assigned checkout page may be empty or missing the checkout block/shortcode.', 'store-maintenance-checklist' ),
+			__( 'The assigned checkout page may be empty or missing the checkout block/shortcode.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
-				'summary' => __( 'Checkout page signal failed heuristics.', 'store-maintenance-checklist' ),
+				'summary' => __( 'Checkout page signal failed heuristics.', 'store-maintenance-checklist-for-woocommerce' ),
 				'count'   => 1,
 				'samples' => array( $id ),
 			),
-			__( 'Checkout', 'store-maintenance-checklist' ),
+			__( 'Checkout', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-settings&tab=advanced'
 		);
 	}

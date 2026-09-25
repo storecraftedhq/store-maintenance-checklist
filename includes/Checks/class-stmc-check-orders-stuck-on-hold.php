@@ -26,7 +26,7 @@ final class STMC_Check_Orders_Stuck_On_Hold extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'Orders stuck On hold', 'store-maintenance-checklist' );
+		return __( 'Orders stuck On hold', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -36,13 +36,13 @@ final class STMC_Check_Orders_Stuck_On_Hold extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Fulfilment backlog: on-hold orders older than 7 days.', 'store-maintenance-checklist' ),
+			__( 'Fulfilment backlog: on-hold orders older than 7 days.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
-				'summary' => __( 'on-hold orders older than 7 days.', 'store-maintenance-checklist' ),
+				'summary' => __( 'on-hold orders older than 7 days.', 'store-maintenance-checklist-for-woocommerce' ),
 				'count'   => $count,
 				'samples' => $this->order_id_samples( $snapshot->stuck_on_hold_samples, $snapshot->admin_url ),
 			),
-			__( 'Orders', 'store-maintenance-checklist' ),
+			__( 'Orders', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-orders&status=wc-on-hold'
 		);
 	}

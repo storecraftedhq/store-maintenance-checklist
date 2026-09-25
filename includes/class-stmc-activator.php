@@ -20,8 +20,8 @@ final class STMC_Activator {
 			require_once ABSPATH . 'wp-admin/includes/plugin.php';
 			deactivate_plugins( plugin_basename( STMC_PLUGIN_FILE ) );
 			wp_die(
-				esc_html__( 'Store Maintenance Checklist for WooCommerce requires WooCommerce.', 'store-maintenance-checklist' ),
-				esc_html__( 'Plugin activation error', 'store-maintenance-checklist' ),
+				esc_html__( 'Store Maintenance Checklist for WooCommerce requires WooCommerce.', 'store-maintenance-checklist-for-woocommerce' ),
+				esc_html__( 'Plugin activation error', 'store-maintenance-checklist-for-woocommerce' ),
 				array( 'back_link' => true )
 			);
 		}

@@ -34,7 +34,7 @@ export default function AppShell( {
 							href={ backHref }
 							aria-label={ __(
 								'Back to Dashboard',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						>
 							<svg
@@ -52,14 +52,14 @@ export default function AppShell( {
 						<h1 className="stmc-sidebar-title">
 							{ __(
 								'Maintenance Checklist',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</h1>
 					</div>
 					<p className="stmc-sidebar-desc">
 						{ __(
 							'Recurring ops checklist for catalog, checkout, email, and order health — not a maintenance-mode tool.',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					</p>
 				</div>
@@ -74,7 +74,7 @@ export default function AppShell( {
 					{ footerText ||
 						__(
 							'StoreCrafted · free on WordPress.org',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 				</div>
 			</aside>

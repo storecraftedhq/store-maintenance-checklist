@@ -41,7 +41,7 @@ final class STMC_Check_Environment_Wc_Status_Linkout extends STMC_Check_Base {
 	 * {@inheritdoc}
 	 */
 	public function title(): string {
-		return __( 'Review WooCommerce Status for system details', 'store-maintenance-checklist' );
+		return __( 'Review WooCommerce Status for system details', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	/**
@@ -50,12 +50,12 @@ final class STMC_Check_Environment_Wc_Status_Linkout extends STMC_Check_Base {
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
 		return $this->open(
 			$snapshot,
-			__( 'Also review WooCommerce Status for DB updates, templates, and system details.', 'store-maintenance-checklist' ),
+			__( 'Also review WooCommerce Status for DB updates, templates, and system details.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
-				'summary' => __( 'Soft nudge to open WooCommerce Status.', 'store-maintenance-checklist' ),
+				'summary' => __( 'Soft nudge to open WooCommerce Status.', 'store-maintenance-checklist-for-woocommerce' ),
 				'count'   => 1,
 			),
-			__( 'Status', 'store-maintenance-checklist' ),
+			__( 'Status', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-status',
 			array( 'score_excluded' => true )
 		);

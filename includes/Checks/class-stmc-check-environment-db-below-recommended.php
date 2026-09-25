@@ -29,7 +29,7 @@ final class STMC_Check_Environment_Db_Below_Recommended extends STMC_Check_Base 
 	}
 
 	public function title(): string {
-		return __( 'Database version below WooCommerce recommendation', 'store-maintenance-checklist' );
+		return __( 'Database version below WooCommerce recommendation', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -49,18 +49,18 @@ final class STMC_Check_Environment_Db_Below_Recommended extends STMC_Check_Base 
 
 		return $this->open(
 			$snapshot,
-			__( 'WooCommerce recommends MySQL 8.0+ or MariaDB 10.6+ for security and performance.', 'store-maintenance-checklist' ),
+			__( 'WooCommerce recommends MySQL 8.0+ or MariaDB 10.6+ for security and performance.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: 1: MySQL or MariaDB, 2: current version, 3: recommended minimum */
-					__( '%1$s %2$s is below the recommended minimum of %3$s.', 'store-maintenance-checklist' ),
+					__( '%1$s %2$s is below the recommended minimum of %3$s.', 'store-maintenance-checklist-for-woocommerce' ),
 					$label,
 					$version,
 					$min
 				),
 				'count'   => 1,
 			),
-			__( 'Status', 'store-maintenance-checklist' ),
+			__( 'Status', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-status'
 		);
 	}

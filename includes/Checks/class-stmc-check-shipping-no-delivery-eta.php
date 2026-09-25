@@ -26,7 +26,7 @@ final class STMC_Check_Shipping_No_Delivery_Eta extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'No delivery time messaging for physical shipping', 'store-maintenance-checklist' );
+		return __( 'No delivery time messaging for physical shipping', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -43,16 +43,16 @@ final class STMC_Check_Shipping_No_Delivery_Eta extends STMC_Check_Base {
 
 		return $this->open(
 			$snapshot,
-			__( 'Shoppers often abandon or contact support when physical shipping offers no delivery time guidance.', 'store-maintenance-checklist' ),
+			__( 'Shoppers often abandon or contact support when physical shipping offers no delivery time guidance.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
-				'summary' => __( 'Physical shipping methods are configured, but no delivery ETA or shipping-time messaging was detected.', 'store-maintenance-checklist' ),
+				'summary' => __( 'Physical shipping methods are configured, but no delivery ETA or shipping-time messaging was detected.', 'store-maintenance-checklist-for-woocommerce' ),
 			),
-			__( 'Shipping', 'store-maintenance-checklist' ),
+			__( 'Shipping', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-settings&tab=shipping',
 			array(
 				'further_tools' => array(
 					array(
-						'label' => __( 'Expected Delivery Times for WooCommerce', 'store-maintenance-checklist' ),
+						'label' => __( 'Expected Delivery Times for WooCommerce', 'store-maintenance-checklist-for-woocommerce' ),
 						'url'   => $url,
 					),
 				),

@@ -24,7 +24,7 @@ final class STMC_Api_Permissions {
 
 		return new WP_Error(
 			'stmc_forbidden',
-			__( 'You do not have permission to manage the maintenance checklist.', 'store-maintenance-checklist' ),
+			__( 'You do not have permission to manage the maintenance checklist.', 'store-maintenance-checklist-for-woocommerce' ),
 			array( 'status' => 403 )
 		);
 	}

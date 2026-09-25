@@ -26,7 +26,7 @@ final class STMC_Check_Email_Weak_From_Address extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'Order emails may use a weak From address', 'store-maintenance-checklist' );
+		return __( 'Order emails may use a weak From address', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -40,16 +40,16 @@ final class STMC_Check_Email_Weak_From_Address extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Addresses like wordpress@ often land in spam.', 'store-maintenance-checklist' ),
+			__( 'Addresses like wordpress@ often land in spam.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: %s: from address */
-					__( 'Current From address: %s', 'store-maintenance-checklist' ),
+					__( 'Current From address: %s', 'store-maintenance-checklist-for-woocommerce' ),
 					$snapshot->email_from
 				),
 				'count'   => 1,
 			),
-			__( 'Emails', 'store-maintenance-checklist' ),
+			__( 'Emails', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-settings&tab=email'
 		);
 	}

@@ -26,7 +26,7 @@ final class STMC_Check_Catalog_Missing_Sku extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'Products missing a SKU', 'store-maintenance-checklist' );
+		return __( 'Products missing a SKU', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {

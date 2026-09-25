@@ -26,7 +26,7 @@ final class STMC_Check_Environment_Store_Address_Incomplete extends STMC_Check_B
 	}
 
 	public function title(): string {
-		return __( 'Store address is incomplete', 'store-maintenance-checklist' );
+		return __( 'Store address is incomplete', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -39,26 +39,26 @@ final class STMC_Check_Environment_Store_Address_Incomplete extends STMC_Check_B
 		}
 		$missing = array();
 		if ( '' === $line1 ) {
-			$missing[] = __( 'address line 1', 'store-maintenance-checklist' );
+			$missing[] = __( 'address line 1', 'store-maintenance-checklist-for-woocommerce' );
 		}
 		if ( '' === $city ) {
-			$missing[] = __( 'city', 'store-maintenance-checklist' );
+			$missing[] = __( 'city', 'store-maintenance-checklist-for-woocommerce' );
 		}
 		if ( '' === $post ) {
-			$missing[] = __( 'postcode', 'store-maintenance-checklist' );
+			$missing[] = __( 'postcode', 'store-maintenance-checklist-for-woocommerce' );
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Tax and shipping rates use the store base location. A complete address keeps those settings reliable.', 'store-maintenance-checklist' ),
+			__( 'Tax and shipping rates use the store base location. A complete address keeps those settings reliable.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: %s: comma-separated missing fields */
-					__( 'Store address is missing: %s.', 'store-maintenance-checklist' ),
+					__( 'Store address is missing: %s.', 'store-maintenance-checklist-for-woocommerce' ),
 					implode( ', ', $missing )
 				),
 				'count'   => count( $missing ),
 			),
-			__( 'General', 'store-maintenance-checklist' ),
+			__( 'General', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-settings&tab=general'
 		);
 	}

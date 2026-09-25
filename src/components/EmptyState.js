@@ -13,13 +13,13 @@ export default function EmptyState( { onScan, busy = false } ) {
 	return (
 		<section
 			className="stmc-empty"
-			aria-label={ __( 'Empty state', 'store-maintenance-checklist' ) }
+			aria-label={ __( 'Empty state', 'store-maintenance-checklist-for-woocommerce' ) }
 		>
-			<h2>{ __( 'No scan yet', 'store-maintenance-checklist' ) }</h2>
+			<h2>{ __( 'No scan yet', 'store-maintenance-checklist-for-woocommerce' ) }</h2>
 			<p>
 				{ __(
 					'Run a checklist scan to see prioritized findings. Scans stay on your site — no remote telemetry.',
-					'store-maintenance-checklist'
+					'store-maintenance-checklist-for-woocommerce'
 				) }
 			</p>
 			<button
@@ -28,7 +28,7 @@ export default function EmptyState( { onScan, busy = false } ) {
 				onClick={ onScan }
 				disabled={ busy }
 			>
-				{ __( 'Run first scan', 'store-maintenance-checklist' ) }
+				{ __( 'Run first scan', 'store-maintenance-checklist-for-woocommerce' ) }
 			</button>
 		</section>
 	);

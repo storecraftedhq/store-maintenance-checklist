@@ -26,7 +26,7 @@ final class STMC_Check_Environment_Fatal_Error_Logs extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'WooCommerce fatal error logs present', 'store-maintenance-checklist' );
+		return __( 'WooCommerce fatal error logs present', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -36,16 +36,16 @@ final class STMC_Check_Environment_Fatal_Error_Logs extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Unresolved PHP fatals can break checkout and admin screens. Review and clear the fatal-errors log after fixing the cause.', 'store-maintenance-checklist' ),
+			__( 'Unresolved PHP fatals can break checkout and admin screens. Review and clear the fatal-errors log after fixing the cause.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: %d: number of non-empty fatal-errors log files */
-					__( '%d non-empty fatal-errors log file(s) found.', 'store-maintenance-checklist' ),
+					__( '%d non-empty fatal-errors log file(s) found.', 'store-maintenance-checklist-for-woocommerce' ),
 					$count
 				),
 				'count'   => $count,
 			),
-			__( 'Logs', 'store-maintenance-checklist' ),
+			__( 'Logs', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-status&tab=logs'
 		);
 	}

@@ -26,7 +26,7 @@ final class STMC_Check_Catalog_Required_Pages extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'Required WooCommerce pages missing or mis-assigned', 'store-maintenance-checklist' );
+		return __( 'Required WooCommerce pages missing or mis-assigned', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -41,17 +41,17 @@ final class STMC_Check_Catalog_Required_Pages extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Cart, checkout, or account pages are missing or not assigned in WooCommerce settings.', 'store-maintenance-checklist' ),
+			__( 'Cart, checkout, or account pages are missing or not assigned in WooCommerce settings.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: %s: comma-separated page keys */
-					__( 'Missing or unassigned pages: %s', 'store-maintenance-checklist' ),
+					__( 'Missing or unassigned pages: %s', 'store-maintenance-checklist-for-woocommerce' ),
 					implode( ', ', $missing )
 				),
 				'count'   => count( $missing ),
 				'samples' => $missing,
 			),
-			__( 'Advanced', 'store-maintenance-checklist' ),
+			__( 'Advanced', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-settings&tab=advanced'
 		);
 	}

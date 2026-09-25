@@ -29,7 +29,7 @@ final class STMC_Check_Orders_Stuck_Failed extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'Orders stuck Failed', 'store-maintenance-checklist' );
+		return __( 'Orders stuck Failed', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -39,13 +39,13 @@ final class STMC_Check_Orders_Stuck_Failed extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Unresolved payment failures: failed orders older than 7 days.', 'store-maintenance-checklist' ),
+			__( 'Unresolved payment failures: failed orders older than 7 days.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
-				'summary' => __( 'failed orders older than 7 days.', 'store-maintenance-checklist' ),
+				'summary' => __( 'failed orders older than 7 days.', 'store-maintenance-checklist-for-woocommerce' ),
 				'count'   => $count,
 				'samples' => $this->order_id_samples( $snapshot->stuck_failed_samples, $snapshot->admin_url ),
 			),
-			__( 'Orders', 'store-maintenance-checklist' ),
+			__( 'Orders', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-orders&status=wc-failed'
 		);
 	}

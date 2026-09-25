@@ -26,7 +26,7 @@ final class STMC_Check_Email_Customer_Completed_Disabled extends STMC_Check_Base
 	}
 
 	public function title(): string {
-		return __( 'Customer “Completed order” email disabled', 'store-maintenance-checklist' );
+		return __( 'Customer “Completed order” email disabled', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -36,12 +36,12 @@ final class STMC_Check_Email_Customer_Completed_Disabled extends STMC_Check_Base
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Buyers may get no receipt when an order is completed.', 'store-maintenance-checklist' ),
+			__( 'Buyers may get no receipt when an order is completed.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
-				'summary' => __( 'customer_completed_order enabled=false', 'store-maintenance-checklist' ),
+				'summary' => __( 'customer_completed_order enabled=false', 'store-maintenance-checklist-for-woocommerce' ),
 				'count'   => 1,
 			),
-			__( 'Emails', 'store-maintenance-checklist' ),
+			__( 'Emails', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-settings&tab=email'
 		);
 	}

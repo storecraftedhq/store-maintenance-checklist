@@ -26,7 +26,7 @@ final class STMC_Check_Payments_No_Gateways extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'No enabled payment gateways', 'store-maintenance-checklist' );
+		return __( 'No enabled payment gateways', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -35,12 +35,12 @@ final class STMC_Check_Payments_No_Gateways extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'The store cannot take payment until at least one gateway is enabled.', 'store-maintenance-checklist' ),
+			__( 'The store cannot take payment until at least one gateway is enabled.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
-				'summary' => __( 'Enabled gateway count = 0', 'store-maintenance-checklist' ),
+				'summary' => __( 'Enabled gateway count = 0', 'store-maintenance-checklist-for-woocommerce' ),
 				'count'   => 0,
 			),
-			__( 'Payments', 'store-maintenance-checklist' ),
+			__( 'Payments', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-settings&tab=checkout'
 		);
 	}

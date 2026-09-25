@@ -26,7 +26,7 @@ final class STMC_Check_Shipping_No_Methods_Configured extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'No shipping methods configured', 'store-maintenance-checklist' );
+		return __( 'No shipping methods configured', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -39,12 +39,12 @@ final class STMC_Check_Shipping_No_Methods_Configured extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Physical checkout is often blocked when no shipping methods exist.', 'store-maintenance-checklist' ),
+			__( 'Physical checkout is often blocked when no shipping methods exist.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
-				'summary' => __( 'No shipping methods in any zone.', 'store-maintenance-checklist' ),
+				'summary' => __( 'No shipping methods in any zone.', 'store-maintenance-checklist-for-woocommerce' ),
 				'count'   => 0,
 			),
-			__( 'Shipping', 'store-maintenance-checklist' ),
+			__( 'Shipping', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-settings&tab=shipping'
 		);
 	}

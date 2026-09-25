@@ -16,7 +16,7 @@
     "test:php": "vendor/bin/phpunit --configuration phpunit.xml.dist",
     "phpcs": "composer run phpcs",
     "phpcbf": "composer run phpcbf",
-    "create:pot": "mkdir -p languages && wp i18n make-pot . languages/store-maintenance-checklist.pot --domain=store-maintenance-checklist",
+    "create:pot": "mkdir -p languages && wp i18n make-pot . languages/store-maintenance-checklist-for-woocommerce.pot --domain=store-maintenance-checklist-for-woocommerce",
     "build:zip": "bash bin/build-zip.sh",
     "release:verify": "bash bin/verify-release.sh"
   },

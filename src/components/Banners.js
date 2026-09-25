@@ -46,7 +46,7 @@ export default function Banners( {
 						<strong>
 							{ __(
 								'Non-production environment',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</strong>
 						<p>
@@ -54,7 +54,7 @@ export default function Banners( {
 							{ ' — ' }
 							{ __(
 								'severities are relaxed. Force production scoring in Settings or via',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }{ ' ' }
 							<code>STMC_FORCE_PRODUCTION_SEVERITY</code>.
 						</p>
@@ -65,7 +65,7 @@ export default function Banners( {
 							className="stmc-btn stmc-btn-sm"
 							onClick={ () => onNavigate?.( '/settings' ) }
 						>
-							{ __( 'Settings', 'store-maintenance-checklist' ) }
+							{ __( 'Settings', 'store-maintenance-checklist-for-woocommerce' ) }
 						</button>
 					</div>
 				</div>
@@ -77,7 +77,7 @@ export default function Banners( {
 						<strong>
 							{ __(
 								'Partial catalog scan',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</strong>
 						<p>
@@ -87,24 +87,24 @@ export default function Banners( {
 										/* translators: 1: products scanned, 2: total products bound */
 										__(
 											'Checked %1$s of %2$s products. Score is',
-											'store-maintenance-checklist'
+											'store-maintenance-checklist-for-woocommerce'
 										),
 										Number( scanned ).toLocaleString(),
 										Number( bound ).toLocaleString()
 								  )
 								: __(
 										'Catalog scan was bounded. Score is',
-										'store-maintenance-checklist'
+										'store-maintenance-checklist-for-woocommerce'
 								  ) }{ ' ' }
 							<span className="stmc-pill">
 								{ __(
 									'Provisional',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</span>{ ' ' }
 							{ __(
 								'until a full bounded pass completes.',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</p>
 					</div>
@@ -120,13 +120,13 @@ export default function Banners( {
 						<strong>
 							{ __(
 								'Background jobs may be stalled',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</strong>
 						<p>
 							{ __(
 								'This scan is waiting on WooCommerce Action Scheduler, but no batch has completed recently. WP-Cron may be delayed on this host — open Scheduled Actions, or retry when cron is healthy.',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</p>
 					</div>
@@ -139,7 +139,7 @@ export default function Banners( {
 						>
 							{ __(
 								'Retry / nudge',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</button>
 						{ scheduledActionsUrl ? (
@@ -149,7 +149,7 @@ export default function Banners( {
 							>
 								{ __(
 									'Scheduled Actions',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</a>
 						) : null }
@@ -161,7 +161,7 @@ export default function Banners( {
 						>
 							{ __(
 								'Cancel scan',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</button>
 					</div>

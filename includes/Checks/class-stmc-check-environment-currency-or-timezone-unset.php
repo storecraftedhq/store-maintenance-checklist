@@ -26,7 +26,7 @@ final class STMC_Check_Environment_Currency_Or_Timezone_Unset extends STMC_Check
 	}
 
 	public function title(): string {
-		return __( 'Store currency or site timezone is unset', 'store-maintenance-checklist' );
+		return __( 'Store currency or site timezone is unset', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -40,23 +40,23 @@ final class STMC_Check_Environment_Currency_Or_Timezone_Unset extends STMC_Check
 		}
 		$missing = array();
 		if ( ! $currency_ok ) {
-			$missing[] = __( 'currency', 'store-maintenance-checklist' );
+			$missing[] = __( 'currency', 'store-maintenance-checklist-for-woocommerce' );
 		}
 		if ( ! $timezone_ok ) {
-			$missing[] = __( 'timezone', 'store-maintenance-checklist' );
+			$missing[] = __( 'timezone', 'store-maintenance-checklist-for-woocommerce' );
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Unset currency or timezone leads to wrong money display or order timestamps.', 'store-maintenance-checklist' ),
+			__( 'Unset currency or timezone leads to wrong money display or order timestamps.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: %s: comma-separated missing fields */
-					__( 'Unset: %s.', 'store-maintenance-checklist' ),
+					__( 'Unset: %s.', 'store-maintenance-checklist-for-woocommerce' ),
 					implode( ', ', $missing )
 				),
 				'count'   => count( $missing ),
 			),
-			__( 'General', 'store-maintenance-checklist' ),
+			__( 'General', 'store-maintenance-checklist-for-woocommerce' ),
 			'options-general.php'
 		);
 	}

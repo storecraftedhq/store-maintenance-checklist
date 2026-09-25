@@ -119,7 +119,7 @@ export default function ChecklistPage( {
 				className="stmc-btn stmc-btn-sm"
 				onClick={ () => onNavigate( '/history' ) }
 			>
-				{ __( 'History', 'store-maintenance-checklist' ) }
+				{ __( 'History', 'store-maintenance-checklist-for-woocommerce' ) }
 			</button>
 			<button
 				type="button"
@@ -127,7 +127,7 @@ export default function ChecklistPage( {
 				onClick={ onExport }
 				disabled={ running || empty }
 			>
-				{ __( 'Export CSV', 'store-maintenance-checklist' ) }
+				{ __( 'Export CSV', 'store-maintenance-checklist-for-woocommerce' ) }
 			</button>
 			{ running ? (
 				<button
@@ -136,7 +136,7 @@ export default function ChecklistPage( {
 					onClick={ () => cancel() }
 					disabled={ busy }
 				>
-					{ __( 'Cancel scan', 'store-maintenance-checklist' ) }
+					{ __( 'Cancel scan', 'store-maintenance-checklist-for-woocommerce' ) }
 				</button>
 			) : null }
 			<button
@@ -146,31 +146,31 @@ export default function ChecklistPage( {
 				disabled={ running || busy }
 			>
 				{ running
-					? __( 'Scanning…', 'store-maintenance-checklist' )
-					: __( 'Run scan', 'store-maintenance-checklist' ) }
+					? __( 'Scanning…', 'store-maintenance-checklist-for-woocommerce' )
+					: __( 'Run scan', 'store-maintenance-checklist-for-woocommerce' ) }
 			</button>
 		</>
 	);
 
 	return (
 		<Canvas
-			title={ __( 'Checklist', 'store-maintenance-checklist' ) }
+			title={ __( 'Checklist', 'store-maintenance-checklist-for-woocommerce' ) }
 			meta={ __(
 				'Prioritized findings · score is secondary · ignored checks excluded',
-				'store-maintenance-checklist'
+				'store-maintenance-checklist-for-woocommerce'
 			) }
 			actions={ actions }
 		>
 			<h2 className="stmc-section-heading">
 				{ __(
 					'Store health this scan',
-					'store-maintenance-checklist'
+					'store-maintenance-checklist-for-woocommerce'
 				) }
 			</h2>
 			<p className="stmc-section-desc">
 				{ __(
 					'Read-only checks for sellability, payments, shipping, email, and order ops. Fix paths use WooCommerce core first; optional tools appear only when relevant.',
-					'store-maintenance-checklist'
+					'store-maintenance-checklist-for-woocommerce'
 				) }
 			</p>
 
@@ -178,7 +178,7 @@ export default function ChecklistPage( {
 				<div className="stmc-danger-banner" role="alert">
 					<div className="stmc-banner-body">
 						<strong>
-							{ __( 'Error', 'store-maintenance-checklist' ) }
+							{ __( 'Error', 'store-maintenance-checklist-for-woocommerce' ) }
 						</strong>
 						<p>{ error }</p>
 					</div>
@@ -187,7 +187,7 @@ export default function ChecklistPage( {
 
 			{ loading && ! scan ? (
 				<p className="stmc-section-desc">
-					{ __( 'Loading…', 'store-maintenance-checklist' ) }
+					{ __( 'Loading…', 'store-maintenance-checklist-for-woocommerce' ) }
 				</p>
 			) : null }
 
@@ -254,7 +254,7 @@ export default function ChecklistPage( {
 									/* translators: %d: number of passed checks */
 									__(
 										'%d checks passed',
-										'store-maintenance-checklist'
+										'store-maintenance-checklist-for-woocommerce'
 									),
 									passed.length
 								) }
@@ -273,7 +273,7 @@ export default function ChecklistPage( {
 						<nav
 							aria-label={ __(
 								'Plugin links',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						>
 							<button
@@ -283,7 +283,7 @@ export default function ChecklistPage( {
 							>
 								{ __(
 									'Settings',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</button>
 							<button
@@ -293,7 +293,7 @@ export default function ChecklistPage( {
 							>
 								{ __(
 									'History',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</button>
 							<button
@@ -303,14 +303,14 @@ export default function ChecklistPage( {
 							>
 								{ __(
 									'About StoreCrafted',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</button>
 						</nav>
 						<p>
 							{ __(
 								'Score excludes ignored checks · Partial catalog scans are marked provisional · No outbound telemetry.',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</p>
 					</footer>

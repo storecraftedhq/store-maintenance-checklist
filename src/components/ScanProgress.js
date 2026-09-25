@@ -23,7 +23,7 @@ export default function ScanProgress( {
 	);
 	const phaseLabel =
 		status?.phase_label ||
-		__( 'Scanning store…', 'store-maintenance-checklist' );
+		__( 'Scanning store…', 'store-maintenance-checklist-for-woocommerce' );
 	const batchCurrent = status?.batch_current;
 	const batchTotal = status?.batch_total;
 	const productsScanned = status?.products_scanned;
@@ -31,7 +31,7 @@ export default function ScanProgress( {
 
 	let detail = __(
 		'Previous findings stay visible until complete',
-		'store-maintenance-checklist'
+		'store-maintenance-checklist-for-woocommerce'
 	);
 	if (
 		typeof productsScanned === 'number' &&
@@ -42,7 +42,7 @@ export default function ScanProgress( {
 			/* translators: 1: products scanned, 2: product bound */
 			__(
 				'~%1$s of %2$s products in this bound · previous findings stay visible until complete',
-				'store-maintenance-checklist'
+				'store-maintenance-checklist-for-woocommerce'
 			),
 			Number( productsScanned ).toLocaleString(),
 			Number( productsBound ).toLocaleString()
@@ -55,7 +55,7 @@ export default function ScanProgress( {
 			/* translators: 1: current batch, 2: total batches */
 			__(
 				'Catalog batch %1$s of %2$s · Action Scheduler',
-				'store-maintenance-checklist'
+				'store-maintenance-checklist-for-woocommerce'
 			),
 			String( batchCurrent ),
 			String( batchTotal )
@@ -64,23 +64,23 @@ export default function ScanProgress( {
 	if ( stalled ) {
 		phase = __(
 			'Last batch completed 8+ minutes ago · Action Scheduler idle',
-			'store-maintenance-checklist'
+			'store-maintenance-checklist-for-woocommerce'
 		);
 		detail = __(
 			'WP-Cron may be delayed — findings below are from the last completed batches only',
-			'store-maintenance-checklist'
+			'store-maintenance-checklist-for-woocommerce'
 		);
 	}
 
 	const title = stalled
 		? __(
 				'Scan waiting on background jobs…',
-				'store-maintenance-checklist'
+				'store-maintenance-checklist-for-woocommerce'
 		  )
-		: __( 'Scanning store…', 'store-maintenance-checklist' );
+		: __( 'Scanning store…', 'store-maintenance-checklist-for-woocommerce' );
 	const pill = stalled
-		? __( 'Stalled', 'store-maintenance-checklist' )
-		: __( 'In progress', 'store-maintenance-checklist' );
+		? __( 'Stalled', 'store-maintenance-checklist-for-woocommerce' )
+		: __( 'In progress', 'store-maintenance-checklist-for-woocommerce' );
 
 	return (
 		<section
@@ -89,7 +89,7 @@ export default function ScanProgress( {
 			}
 			aria-label={ __(
 				'Scan in progress',
-				'store-maintenance-checklist'
+				'store-maintenance-checklist-for-woocommerce'
 			) }
 		>
 			<div className="stmc-scan-progress-header">
@@ -129,12 +129,12 @@ export default function ScanProgress( {
 					onClick={ onCancel }
 					disabled={ busy }
 				>
-					{ __( 'Cancel scan', 'store-maintenance-checklist' ) }
+					{ __( 'Cancel scan', 'store-maintenance-checklist-for-woocommerce' ) }
 				</button>
 				<span className="stmc-scan-progress-hint">
 					{ __(
 						'One scan at a time · cancel stops further batches',
-						'store-maintenance-checklist'
+						'store-maintenance-checklist-for-woocommerce'
 					) }
 				</span>
 			</div>

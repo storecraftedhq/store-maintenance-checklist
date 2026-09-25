@@ -29,14 +29,14 @@ export default function MetricStrip( {
 			className: 'stmc-metric-card score accent',
 			title: __(
 				'Score is informational',
-				'store-maintenance-checklist'
+				'store-maintenance-checklist-for-woocommerce'
 			),
 			content: (
 				<>
 					<div className="stmc-metric-label">
 						{ __(
 							'Checklist score',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					</div>
 					<div className="stmc-metric-row">
@@ -45,7 +45,7 @@ export default function MetricStrip( {
 							<span className="stmc-pill">
 								{ __(
 									'Provisional',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</span>
 						) : null }
@@ -53,7 +53,7 @@ export default function MetricStrip( {
 					<div className="stmc-metric-sub">
 						{ __(
 							'Not a security or PCI rating',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					</div>
 				</>
@@ -67,12 +67,12 @@ export default function MetricStrip( {
 				<>
 					<div className="stmc-metric-value">{ s.open ?? 0 }</div>
 					<div className="stmc-metric-label">
-						{ __( 'Open', 'store-maintenance-checklist' ) }
+						{ __( 'Open', 'store-maintenance-checklist-for-woocommerce' ) }
 					</div>
 					<div className="stmc-metric-sub">
 						{ __(
 							'All severities',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					</div>
 				</>
@@ -86,10 +86,10 @@ export default function MetricStrip( {
 				<>
 					<div className="stmc-metric-value">{ s.critical ?? 0 }</div>
 					<div className="stmc-metric-label">
-						{ __( 'Critical', 'store-maintenance-checklist' ) }
+						{ __( 'Critical', 'store-maintenance-checklist-for-woocommerce' ) }
 					</div>
 					<div className="stmc-metric-sub">
-						{ __( 'Fix first', 'store-maintenance-checklist' ) }
+						{ __( 'Fix first', 'store-maintenance-checklist-for-woocommerce' ) }
 					</div>
 				</>
 			),
@@ -102,10 +102,10 @@ export default function MetricStrip( {
 				<>
 					<div className="stmc-metric-value">{ s.warning ?? 0 }</div>
 					<div className="stmc-metric-label">
-						{ __( 'Warning', 'store-maintenance-checklist' ) }
+						{ __( 'Warning', 'store-maintenance-checklist-for-woocommerce' ) }
 					</div>
 					<div className="stmc-metric-sub">
-						{ __( 'Ops risk', 'store-maintenance-checklist' ) }
+						{ __( 'Ops risk', 'store-maintenance-checklist-for-woocommerce' ) }
 					</div>
 				</>
 			),
@@ -118,10 +118,10 @@ export default function MetricStrip( {
 				<>
 					<div className="stmc-metric-value">{ s.info ?? 0 }</div>
 					<div className="stmc-metric-label">
-						{ __( 'Info', 'store-maintenance-checklist' ) }
+						{ __( 'Info', 'store-maintenance-checklist-for-woocommerce' ) }
 					</div>
 					<div className="stmc-metric-sub">
-						{ __( 'Hygiene', 'store-maintenance-checklist' ) }
+						{ __( 'Hygiene', 'store-maintenance-checklist-for-woocommerce' ) }
 					</div>
 				</>
 			),
@@ -133,7 +133,7 @@ export default function MetricStrip( {
 			className={
 				dimmed ? 'stmc-metrics-bar is-dimmed' : 'stmc-metrics-bar'
 			}
-			aria-label={ __( 'Scan summary', 'store-maintenance-checklist' ) }
+			aria-label={ __( 'Scan summary', 'store-maintenance-checklist-for-woocommerce' ) }
 		>
 			{ cards.map( ( card ) => {
 				const isActive =

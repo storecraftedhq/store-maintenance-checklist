@@ -9,7 +9,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT_DIR"
 
-PLUGIN_SLUG="store-maintenance-checklist"
+PLUGIN_SLUG="store-maintenance-checklist-for-woocommerce"
 PLUGIN_FILE="store-maintenance-checklist.php"
 
 echo "==> PHPCS"
@@ -109,6 +109,6 @@ echo "  Zip:     ${ZIP_PATH} (${ZIP_SIZE})"
 echo ""
 echo "Next steps:"
 echo "  1. Smoke-test in Docker: npm run docker:up"
-echo "  2. Plugin Check on Docker: wp plugin check store-maintenance-checklist"
+echo "  2. Plugin Check on Docker: wp plugin check store-maintenance-checklist-for-woocommerce"
 echo "  3. Tag the release:       git tag ${VERSION}"
 echo "  4. Push tag:              git push origin ${VERSION}"

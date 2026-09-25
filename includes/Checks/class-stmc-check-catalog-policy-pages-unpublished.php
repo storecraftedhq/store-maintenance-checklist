@@ -29,13 +29,13 @@ final class STMC_Check_Catalog_Policy_Pages_Unpublished extends STMC_Check_Base 
 	}
 
 	public function title(): string {
-		return __( 'Privacy or refunds policy page not published', 'store-maintenance-checklist' );
+		return __( 'Privacy or refunds policy page not published', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
 		$labels  = array(
-			'privacy' => __( 'Privacy Policy', 'store-maintenance-checklist' ),
-			'refunds' => __( 'Refund and Returns Policy', 'store-maintenance-checklist' ),
+			'privacy' => __( 'Privacy Policy', 'store-maintenance-checklist-for-woocommerce' ),
+			'refunds' => __( 'Refund and Returns Policy', 'store-maintenance-checklist-for-woocommerce' ),
 		);
 		$bad     = array();
 		$samples = array();
@@ -63,17 +63,17 @@ final class STMC_Check_Catalog_Policy_Pages_Unpublished extends STMC_Check_Base 
 
 		return $this->open(
 			$snapshot,
-			__( 'Payment gateways and customers expect Privacy and Refunds policy pages to be publicly published.', 'store-maintenance-checklist' ),
+			__( 'Payment gateways and customers expect Privacy and Refunds policy pages to be publicly published.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: %s: comma-separated page titles */
-					__( 'Not published: %s', 'store-maintenance-checklist' ),
+					__( 'Not published: %s', 'store-maintenance-checklist-for-woocommerce' ),
 					implode( ', ', $bad )
 				),
 				'count'   => count( $bad ),
 				'samples' => $samples,
 			),
-			__( 'Pages', 'store-maintenance-checklist' ),
+			__( 'Pages', 'store-maintenance-checklist-for-woocommerce' ),
 			'edit.php?post_type=page'
 		);
 	}

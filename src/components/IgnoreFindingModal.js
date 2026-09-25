@@ -8,7 +8,7 @@ import Modal from './Modal';
 
 const DEFAULT_REASON = __(
 	'Expected for this store',
-	'store-maintenance-checklist'
+	'store-maintenance-checklist-for-woocommerce'
 );
 const MAX_REASON = 200;
 
@@ -38,7 +38,7 @@ export default function IgnoreFindingModal( {
 	return (
 		<Modal
 			isOpen={ open }
-			title={ __( 'Ignore finding', 'store-maintenance-checklist' ) }
+			title={ __( 'Ignore finding', 'store-maintenance-checklist-for-woocommerce' ) }
 			onClose={ onClose }
 			footer={
 				<>
@@ -48,7 +48,7 @@ export default function IgnoreFindingModal( {
 						onClick={ onClose }
 						disabled={ busy }
 					>
-						{ __( 'Cancel', 'store-maintenance-checklist' ) }
+						{ __( 'Cancel', 'store-maintenance-checklist-for-woocommerce' ) }
 					</button>
 					<button
 						type="button"
@@ -57,10 +57,10 @@ export default function IgnoreFindingModal( {
 						disabled={ busy }
 					>
 						{ busy
-							? __( 'Ignoring…', 'store-maintenance-checklist' )
+							? __( 'Ignoring…', 'store-maintenance-checklist-for-woocommerce' )
 							: __(
 									'Ignore finding',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 							  ) }
 					</button>
 				</>
@@ -70,7 +70,7 @@ export default function IgnoreFindingModal( {
 				<p className="stmc-modal-lead">
 					{ __(
 						'This check will be excluded from the score until you restore it.',
-						'store-maintenance-checklist'
+						'store-maintenance-checklist-for-woocommerce'
 					) }
 				</p>
 			) : null }
@@ -86,7 +86,7 @@ export default function IgnoreFindingModal( {
 				</p>
 			) : null }
 			<label className="stmc-field-label" htmlFor="stmc-ignore-reason">
-				{ __( 'Reason (optional)', 'store-maintenance-checklist' ) }
+				{ __( 'Reason (optional)', 'store-maintenance-checklist-for-woocommerce' ) }
 			</label>
 			<textarea
 				id="stmc-ignore-reason"
@@ -100,7 +100,7 @@ export default function IgnoreFindingModal( {
 			<p className="stmc-field-hint">
 				{ __(
 					'Shown on the ignored finding. Max 200 characters.',
-					'store-maintenance-checklist'
+					'store-maintenance-checklist-for-woocommerce'
 				) }
 			</p>
 		</Modal>

@@ -26,7 +26,7 @@ final class STMC_Check_Shipping_Empty_Default_Zone extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'Default / catch-all shipping zone has no methods', 'store-maintenance-checklist' );
+		return __( 'Default / catch-all shipping zone has no methods', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -40,17 +40,17 @@ final class STMC_Check_Shipping_Empty_Default_Zone extends STMC_Check_Base {
 			}
 			return $this->open(
 				$snapshot,
-				__( 'Unmatched locations cannot ship when the catch-all zone has no methods.', 'store-maintenance-checklist' ),
+				__( 'Unmatched locations cannot ship when the catch-all zone has no methods.', 'store-maintenance-checklist-for-woocommerce' ),
 				array(
 					'summary' => sprintf(
 						/* translators: %s: zone name */
-						__( 'Default zone "%s" has 0 methods.', 'store-maintenance-checklist' ),
+						__( 'Default zone "%s" has 0 methods.', 'store-maintenance-checklist-for-woocommerce' ),
 						(string) ( $zone['name'] ?? 'default' )
 					),
 					'count'   => 0,
 					'samples' => array( (string) ( $zone['name'] ?? 'default' ) ),
 				),
-				__( 'Shipping', 'store-maintenance-checklist' ),
+				__( 'Shipping', 'store-maintenance-checklist-for-woocommerce' ),
 				'admin.php?page=wc-settings&tab=shipping'
 			);
 		}

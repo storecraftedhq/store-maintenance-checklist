@@ -22,7 +22,8 @@ services:
       - "${WP_ENV_PORT:-8888}:80"
     volumes:
       - wordpress_data:/var/www/html
-      - .:/var/www/html/wp-content/plugins/store-maintenance-checklist
+      # Mount as WP.org slug so local Plugin Check matches the text domain.
+      - .:/var/www/html/wp-content/plugins/store-maintenance-checklist-for-woocommerce
       - ./bin/docker/mailpit-smtp.php:/var/www/html/wp-content/mu-plugins/mailpit-smtp.php
     environment:
       WORDPRESS_DB_HOST: mysql

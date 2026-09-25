@@ -8,7 +8,7 @@ const ITEMS = [
 	{
 		page: 'checklist',
 		path: '/',
-		label: __( 'Checklist', 'store-maintenance-checklist' ),
+		label: __( 'Checklist', 'store-maintenance-checklist-for-woocommerce' ),
 		icon: <path d="M9 11l3 3L22 4" />,
 		iconExtra: (
 			<path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
@@ -18,7 +18,7 @@ const ITEMS = [
 	{
 		page: 'settings',
 		path: '/settings',
-		label: __( 'Settings', 'store-maintenance-checklist' ),
+		label: __( 'Settings', 'store-maintenance-checklist-for-woocommerce' ),
 		icon: (
 			<>
 				<circle cx="12" cy="12" r="3" />
@@ -29,7 +29,7 @@ const ITEMS = [
 	{
 		page: 'history',
 		path: '/history',
-		label: __( 'History', 'store-maintenance-checklist' ),
+		label: __( 'History', 'store-maintenance-checklist-for-woocommerce' ),
 		icon: (
 			<>
 				<circle cx="12" cy="12" r="10" />
@@ -40,7 +40,7 @@ const ITEMS = [
 	{
 		page: 'about',
 		path: '/about',
-		label: __( 'About', 'store-maintenance-checklist' ),
+		label: __( 'About', 'store-maintenance-checklist-for-woocommerce' ),
 		icon: (
 			<>
 				<circle cx="12" cy="12" r="10" />
@@ -62,7 +62,7 @@ export default function SidebarNav( { page, openCount, onNavigate } ) {
 			className="stmc-sidebar-nav"
 			aria-label={ __(
 				'Plugin navigation',
-				'store-maintenance-checklist'
+				'store-maintenance-checklist-for-woocommerce'
 			) }
 		>
 			{ ITEMS.map( ( item ) => {

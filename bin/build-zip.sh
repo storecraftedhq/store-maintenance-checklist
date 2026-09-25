@@ -3,7 +3,8 @@ set -euo pipefail
 
 # Free WP.org plugin: runtime uses SPL autoload — no Composer vendor in the zip.
 
-PLUGIN_SLUG="store-maintenance-checklist"
+# Zip root folder must match WP.org / text domain (repo directory may stay short).
+PLUGIN_SLUG="store-maintenance-checklist-for-woocommerce"
 PLUGIN_FILE="store-maintenance-checklist.php"
 DIST_DIR="dist"
 

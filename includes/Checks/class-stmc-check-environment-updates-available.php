@@ -26,7 +26,7 @@ final class STMC_Check_Environment_Updates_Available extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'WordPress or WooCommerce updates available', 'store-maintenance-checklist' );
+		return __( 'WordPress or WooCommerce updates available', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -37,23 +37,23 @@ final class STMC_Check_Environment_Updates_Available extends STMC_Check_Base {
 		}
 		$parts = array();
 		if ( $wp ) {
-			$parts[] = __( 'WordPress', 'store-maintenance-checklist' );
+			$parts[] = __( 'WordPress', 'store-maintenance-checklist-for-woocommerce' );
 		}
 		if ( $wc ) {
 			$parts[] = 'WooCommerce';
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Pending updates increase security and compatibility risk.', 'store-maintenance-checklist' ),
+			__( 'Pending updates increase security and compatibility risk.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: %s: comma-separated list of update targets */
-					__( 'Updates available for: %s.', 'store-maintenance-checklist' ),
+					__( 'Updates available for: %s.', 'store-maintenance-checklist-for-woocommerce' ),
 					implode( ', ', $parts )
 				),
 				'count'   => count( $parts ),
 			),
-			__( 'Updates', 'store-maintenance-checklist' ),
+			__( 'Updates', 'store-maintenance-checklist-for-woocommerce' ),
 			'update-core.php'
 		);
 	}

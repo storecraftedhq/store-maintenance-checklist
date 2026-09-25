@@ -41,7 +41,7 @@ final class STMC_Check_Shipping_Zone_Without_Methods extends STMC_Check_Base {
 	 * {@inheritdoc}
 	 */
 	public function title(): string {
-		return __( 'One or more shipping zones have no methods', 'store-maintenance-checklist' );
+		return __( 'One or more shipping zones have no methods', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	/**
@@ -63,17 +63,17 @@ final class STMC_Check_Shipping_Zone_Without_Methods extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Regional checkout gaps occur when a zone has no shipping methods.', 'store-maintenance-checklist' ),
+			__( 'Regional checkout gaps occur when a zone has no shipping methods.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: %s: zone names */
-					__( 'Zones without methods: %s', 'store-maintenance-checklist' ),
+					__( 'Zones without methods: %s', 'store-maintenance-checklist-for-woocommerce' ),
 					implode( ', ', $empty )
 				),
 				'count'   => count( $empty ),
 				'samples' => array_slice( $empty, 0, 3 ),
 			),
-			__( 'Shipping', 'store-maintenance-checklist' ),
+			__( 'Shipping', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-settings&tab=shipping'
 		);
 	}

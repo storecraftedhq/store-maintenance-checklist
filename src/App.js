@@ -21,7 +21,7 @@ function formatFooter( iso, envType ) {
 	if ( ! iso ) {
 		return __(
 			'StoreCrafted · free on WordPress.org',
-			'store-maintenance-checklist'
+			'store-maintenance-checklist-for-woocommerce'
 		);
 	}
 	try {
@@ -32,14 +32,14 @@ function formatFooter( iso, envType ) {
 		} );
 		return sprintf(
 			/* translators: 1: datetime, 2: environment type */
-			__( 'Last scan · %1$s · %2$s', 'store-maintenance-checklist' ),
+			__( 'Last scan · %1$s · %2$s', 'store-maintenance-checklist-for-woocommerce' ),
 			when,
 			envType || 'production'
 		);
 	} catch ( e ) {
 		return __(
 			'StoreCrafted · free on WordPress.org',
-			'store-maintenance-checklist'
+			'store-maintenance-checklist-for-woocommerce'
 		);
 	}
 }

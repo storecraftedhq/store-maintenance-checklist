@@ -132,7 +132,7 @@ export async function downloadCsv() {
 	if ( response && response.ok === false ) {
 		let message = sprintf(
 			/* translators: %s: HTTP status code */
-			__( 'CSV export failed (HTTP %s).', 'store-maintenance-checklist' ),
+			__( 'CSV export failed (HTTP %s).', 'store-maintenance-checklist-for-woocommerce' ),
 			String( response.status || '?' )
 		);
 		if ( typeof response.json === 'function' ) {
@@ -153,7 +153,7 @@ export async function downloadCsv() {
 				? response
 				: __(
 						'Unexpected CSV export response.',
-						'store-maintenance-checklist'
+						'store-maintenance-checklist-for-woocommerce'
 				  )
 		);
 	}

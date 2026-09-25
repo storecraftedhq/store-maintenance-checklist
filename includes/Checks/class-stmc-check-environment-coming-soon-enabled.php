@@ -26,7 +26,7 @@ final class STMC_Check_Environment_Coming_Soon_Enabled extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'WooCommerce Coming soon mode is enabled', 'store-maintenance-checklist' );
+		return __( 'WooCommerce Coming soon mode is enabled', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -35,12 +35,12 @@ final class STMC_Check_Environment_Coming_Soon_Enabled extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Coming soon mode can hide the storefront from shoppers.', 'store-maintenance-checklist' ),
+			__( 'Coming soon mode can hide the storefront from shoppers.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
-				'summary' => __( 'woocommerce_coming_soon is enabled.', 'store-maintenance-checklist' ),
+				'summary' => __( 'woocommerce_coming_soon is enabled.', 'store-maintenance-checklist-for-woocommerce' ),
 				'count'   => 1,
 			),
-			__( 'Settings', 'store-maintenance-checklist' ),
+			__( 'Settings', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-settings&tab=site-visibility'
 		);
 	}

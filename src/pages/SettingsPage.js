@@ -36,7 +36,7 @@ export default function SettingsPage( { onNavigate } ) {
 				onClick={ resetDefaults }
 				disabled={ saving }
 			>
-				{ __( 'Reset defaults', 'store-maintenance-checklist' ) }
+				{ __( 'Reset defaults', 'store-maintenance-checklist-for-woocommerce' ) }
 			</button>
 			<button
 				type="button"
@@ -45,28 +45,28 @@ export default function SettingsPage( { onNavigate } ) {
 				disabled={ saving }
 			>
 				{ saving
-					? __( 'Saving…', 'store-maintenance-checklist' )
-					: __( 'Save settings', 'store-maintenance-checklist' ) }
+					? __( 'Saving…', 'store-maintenance-checklist-for-woocommerce' )
+					: __( 'Save settings', 'store-maintenance-checklist-for-woocommerce' ) }
 			</button>
 		</>
 	);
 
 	return (
 		<Canvas
-			title={ __( 'Settings', 'store-maintenance-checklist' ) }
+			title={ __( 'Settings', 'store-maintenance-checklist-for-woocommerce' ) }
 			meta={ __(
 				'Severity overrides, scan bounds, and ignore housekeeping',
-				'store-maintenance-checklist'
+				'store-maintenance-checklist-for-woocommerce'
 			) }
 			actions={ actions }
 		>
 			<h2 className="stmc-section-heading">
-				{ __( 'Scan behaviour', 'store-maintenance-checklist' ) }
+				{ __( 'Scan behaviour', 'store-maintenance-checklist-for-woocommerce' ) }
 			</h2>
 			<p className="stmc-section-desc">
 				{ __(
 					'Controls how severity is calculated and how large catalogs are scanned. Nothing here sends data off-site.',
-					'store-maintenance-checklist'
+					'store-maintenance-checklist-for-woocommerce'
 				) }
 			</p>
 
@@ -74,7 +74,7 @@ export default function SettingsPage( { onNavigate } ) {
 				<div className="stmc-danger-banner" role="alert">
 					<div className="stmc-banner-body">
 						<strong>
-							{ __( 'Error', 'store-maintenance-checklist' ) }
+							{ __( 'Error', 'store-maintenance-checklist-for-woocommerce' ) }
 						</strong>
 						<p>{ error }</p>
 					</div>
@@ -87,7 +87,7 @@ export default function SettingsPage( { onNavigate } ) {
 						<strong>
 							{ __(
 								'Settings saved',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</strong>
 					</div>
@@ -96,7 +96,7 @@ export default function SettingsPage( { onNavigate } ) {
 
 			{ loading ? (
 				<p className="stmc-section-desc">
-					{ __( 'Loading…', 'store-maintenance-checklist' ) }
+					{ __( 'Loading…', 'store-maintenance-checklist-for-woocommerce' ) }
 				</p>
 			) : (
 				<div className="stmc-settings-stack">
@@ -106,13 +106,13 @@ export default function SettingsPage( { onNavigate } ) {
 								<div className="stmc-toggle-label">
 									{ __(
 										'Treat as production for scan severity',
-										'store-maintenance-checklist'
+										'store-maintenance-checklist-for-woocommerce'
 									) }
 								</div>
 								<div className="stmc-toggle-desc">
 									{ __(
 										'Use full production severities even when WP_ENVIRONMENT_TYPE is local, development, or staging. Useful for QA on staging. Constant STMC_FORCE_PRODUCTION_SEVERITY overrides this when defined.',
-										'store-maintenance-checklist'
+										'store-maintenance-checklist-for-woocommerce'
 									) }
 									{ forceDefined ? (
 										<>
@@ -120,7 +120,7 @@ export default function SettingsPage( { onNavigate } ) {
 											<strong>
 												{ __(
 													'Constant is currently defined.',
-													'store-maintenance-checklist'
+													'store-maintenance-checklist-for-woocommerce'
 												) }
 											</strong>
 										</>
@@ -137,7 +137,7 @@ export default function SettingsPage( { onNavigate } ) {
 								aria-pressed={ draft.force_production_severity }
 								aria-label={ __(
 									'Treat as production for scan severity',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 								disabled={ forceDefined }
 								onClick={ () =>
@@ -153,13 +153,13 @@ export default function SettingsPage( { onNavigate } ) {
 								<div className="stmc-toggle-label">
 									{ __(
 										'Show further tools links',
-										'store-maintenance-checklist'
+										'store-maintenance-checklist-for-woocommerce'
 									) }
 								</div>
 								<div className="stmc-toggle-desc">
 									{ __(
 										'When a finding has an optional StoreCrafted product, show a clearly labeled “Further tools” line after the free/core fix path.',
-										'store-maintenance-checklist'
+										'store-maintenance-checklist-for-woocommerce'
 									) }
 								</div>
 							</div>
@@ -173,7 +173,7 @@ export default function SettingsPage( { onNavigate } ) {
 								aria-pressed={ draft.show_further_tools }
 								aria-label={ __(
 									'Show further tools links',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 								onClick={ () =>
 									updateDraft( {
@@ -188,7 +188,7 @@ export default function SettingsPage( { onNavigate } ) {
 					<h3 className="stmc-subsection-title">
 						{ __(
 							'Catalog scan bounds',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					</h3>
 					<div className="stmc-settings-card">
@@ -199,13 +199,13 @@ export default function SettingsPage( { onNavigate } ) {
 							>
 								{ __(
 									'Max products per scan',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</label>
 							<p className="stmc-field-hint">
 								{ __(
 									'Keeps admin requests predictable on large catalogs. Partial scans mark the score as provisional.',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</p>
 							<input
@@ -230,13 +230,13 @@ export default function SettingsPage( { onNavigate } ) {
 							>
 								{ __(
 									'Max variations per scan',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</label>
 							<p className="stmc-field-hint">
 								{ __(
 									'Applied after the product bound when checking incomplete variation prices.',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</p>
 							<input
@@ -261,7 +261,7 @@ export default function SettingsPage( { onNavigate } ) {
 					<h3 className="stmc-subsection-title">
 						{ __(
 							'Developer override',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					</h3>
 					<div className="stmc-settings-card">
@@ -269,13 +269,13 @@ export default function SettingsPage( { onNavigate } ) {
 							<div className="stmc-field-label">
 								{ __(
 									'wp-config constant',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</div>
 							<p className="stmc-field-hint">
 								{ __(
 									'Add this to force production severities in local/CI without using the admin toggle.',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</p>
 							<pre className="stmc-code-block">
@@ -288,13 +288,13 @@ export default function SettingsPage( { onNavigate } ) {
 							<div className="stmc-field-label">
 								{ __(
 									'Filter',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</div>
 							<p className="stmc-field-hint">
 								{ __(
 									'For PHPUnit and advanced customization.',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</p>
 							<pre className="stmc-code-block">
@@ -308,7 +308,7 @@ export default function SettingsPage( { onNavigate } ) {
 					<h3 className="stmc-subsection-title">
 						{ __(
 							'Ignored checks',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					</h3>
 					<div className="stmc-settings-card">
@@ -321,7 +321,7 @@ export default function SettingsPage( { onNavigate } ) {
 											'%d ignored check on this site',
 											'%d ignored checks on this site',
 											ignoredCount,
-											'store-maintenance-checklist'
+											'store-maintenance-checklist-for-woocommerce'
 										),
 										ignoredCount
 									) }
@@ -329,7 +329,7 @@ export default function SettingsPage( { onNavigate } ) {
 								<div className="stmc-toggle-desc">
 									{ __(
 										'Ignored checks are excluded from the score. Manage them on the Checklist with the Ignored filter.',
-										'store-maintenance-checklist'
+										'store-maintenance-checklist-for-woocommerce'
 									) }
 								</div>
 							</div>
@@ -342,7 +342,7 @@ export default function SettingsPage( { onNavigate } ) {
 							>
 								{ __(
 									'Manage on Checklist',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</button>
 						</div>
@@ -357,7 +357,7 @@ export default function SettingsPage( { onNavigate } ) {
 						>
 							{ __(
 								'Save settings',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</button>
 						<button
@@ -367,7 +367,7 @@ export default function SettingsPage( { onNavigate } ) {
 						>
 							{ __(
 								'Back to Checklist',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</button>
 					</div>

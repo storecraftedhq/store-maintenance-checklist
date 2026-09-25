@@ -26,7 +26,7 @@ final class STMC_Check_Payments_Taxes_Enabled_No_Rates extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'Taxes enabled but no tax rates configured', 'store-maintenance-checklist' );
+		return __( 'Taxes enabled but no tax rates configured', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -35,12 +35,12 @@ final class STMC_Check_Payments_Taxes_Enabled_No_Rates extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Tax calculation is turned on, but no rates exist for WooCommerce to apply.', 'store-maintenance-checklist' ),
+			__( 'Tax calculation is turned on, but no rates exist for WooCommerce to apply.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
-				'summary' => __( 'woocommerce_calc_taxes is enabled and the tax rates table is empty.', 'store-maintenance-checklist' ),
+				'summary' => __( 'woocommerce_calc_taxes is enabled and the tax rates table is empty.', 'store-maintenance-checklist-for-woocommerce' ),
 				'count'   => 0,
 			),
-			__( 'Tax', 'store-maintenance-checklist' ),
+			__( 'Tax', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-settings&tab=tax'
 		);
 	}

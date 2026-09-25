@@ -68,7 +68,7 @@ export default function Modal( {
 				className="stmc-modal-backdrop"
 				aria-label={ __(
 					'Close dialog',
-					'store-maintenance-checklist'
+					'store-maintenance-checklist-for-woocommerce'
 				) }
 				onClick={ onClose }
 			/>
@@ -91,7 +91,7 @@ export default function Modal( {
 						onClick={ onClose }
 						aria-label={ __(
 							'Close',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					>
 						×

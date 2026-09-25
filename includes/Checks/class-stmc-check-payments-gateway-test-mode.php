@@ -41,7 +41,7 @@ final class STMC_Check_Payments_Gateway_Test_Mode extends STMC_Check_Base {
 	 * {@inheritdoc}
 	 */
 	public function title(): string {
-		return __( 'Payment gateway in test / sandbox mode', 'store-maintenance-checklist' );
+		return __( 'Payment gateway in test / sandbox mode', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	/**
@@ -63,17 +63,17 @@ final class STMC_Check_Payments_Gateway_Test_Mode extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Live customers may not be charged while a gateway reports test/sandbox mode.', 'store-maintenance-checklist' ),
+			__( 'Live customers may not be charged while a gateway reports test/sandbox mode.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: %s: gateway ids */
-					__( 'Gateways in test mode: %s', 'store-maintenance-checklist' ),
+					__( 'Gateways in test mode: %s', 'store-maintenance-checklist-for-woocommerce' ),
 					implode( ', ', $in_test )
 				),
 				'count'   => count( $in_test ),
 				'samples' => $in_test,
 			),
-			__( 'Payments', 'store-maintenance-checklist' ),
+			__( 'Payments', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-settings&tab=checkout'
 		);
 	}

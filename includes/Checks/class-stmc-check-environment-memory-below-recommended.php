@@ -28,7 +28,7 @@ final class STMC_Check_Environment_Memory_Below_Recommended extends STMC_Check_B
 	}
 
 	public function title(): string {
-		return __( 'WordPress memory limit below recommendation', 'store-maintenance-checklist' );
+		return __( 'WordPress memory limit below recommendation', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -42,17 +42,17 @@ final class STMC_Check_Environment_Memory_Below_Recommended extends STMC_Check_B
 
 		return $this->open(
 			$snapshot,
-			__( 'WooCommerce recommends a WordPress memory limit of 256 MB or greater.', 'store-maintenance-checklist' ),
+			__( 'WooCommerce recommends a WordPress memory limit of 256 MB or greater.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: 1: current memory limit in MB, 2: recommended minimum in MB */
-					__( 'WP_MEMORY_LIMIT is about %1$d MB (recommended minimum %2$d MB).', 'store-maintenance-checklist' ),
+					__( 'WP_MEMORY_LIMIT is about %1$d MB (recommended minimum %2$d MB).', 'store-maintenance-checklist-for-woocommerce' ),
 					(int) floor( $bytes / ( 1024 * 1024 ) ),
 					256
 				),
 				'count'   => 1,
 			),
-			__( 'Guide', 'store-maintenance-checklist' ),
+			__( 'Guide', 'store-maintenance-checklist-for-woocommerce' ),
 			$url
 		);
 	}

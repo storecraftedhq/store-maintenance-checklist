@@ -41,7 +41,7 @@ final class STMC_Check_Catalog_Downloadable_Missing_File extends STMC_Check_Base
 	 * {@inheritdoc}
 	 */
 	public function title(): string {
-		return __( 'Downloadable products missing files', 'store-maintenance-checklist' );
+		return __( 'Downloadable products missing files', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	/**

@@ -26,7 +26,7 @@ final class STMC_Check_Environment_Plain_Permalinks extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'Pretty permalinks are disabled', 'store-maintenance-checklist' );
+		return __( 'Pretty permalinks are disabled', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -36,11 +36,11 @@ final class STMC_Check_Environment_Plain_Permalinks extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Plain ?p= URLs hurt shareability, caching, and common storefront setups.', 'store-maintenance-checklist' ),
+			__( 'Plain ?p= URLs hurt shareability, caching, and common storefront setups.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
-				'summary' => __( 'Permalink structure is set to Plain (empty). Choose a pretty structure such as Post name.', 'store-maintenance-checklist' ),
+				'summary' => __( 'Permalink structure is set to Plain (empty). Choose a pretty structure such as Post name.', 'store-maintenance-checklist-for-woocommerce' ),
 			),
-			__( 'Permalinks', 'store-maintenance-checklist' ),
+			__( 'Permalinks', 'store-maintenance-checklist-for-woocommerce' ),
 			'options-permalink.php'
 		);
 	}

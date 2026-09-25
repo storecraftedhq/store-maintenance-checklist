@@ -64,34 +64,34 @@ export default function HistoryPage( { onNavigate } ) {
 				onClick={ () => setClearOpen( true ) }
 				disabled={ busy || items.length === 0 }
 			>
-				{ __( 'Clear history', 'store-maintenance-checklist' ) }
+				{ __( 'Clear history', 'store-maintenance-checklist-for-woocommerce' ) }
 			</button>
 			<button
 				type="button"
 				className="stmc-btn stmc-btn-primary stmc-btn-sm"
 				onClick={ () => onNavigate( '/' ) }
 			>
-				{ __( 'Open latest', 'store-maintenance-checklist' ) }
+				{ __( 'Open latest', 'store-maintenance-checklist-for-woocommerce' ) }
 			</button>
 		</>
 	);
 
 	return (
 		<Canvas
-			title={ __( 'History', 'store-maintenance-checklist' ) }
+			title={ __( 'History', 'store-maintenance-checklist-for-woocommerce' ) }
 			meta={ __(
 				'Last 5–10 scan summaries · New / Resolved / Unchanged vs previous run',
-				'store-maintenance-checklist'
+				'store-maintenance-checklist-for-woocommerce'
 			) }
 			actions={ actions }
 		>
 			<h2 className="stmc-section-heading">
-				{ __( 'Recent scans', 'store-maintenance-checklist' ) }
+				{ __( 'Recent scans', 'store-maintenance-checklist-for-woocommerce' ) }
 			</h2>
 			<p className="stmc-section-desc">
 				{ __(
 					'Local summaries only — score, severity counts, environment mode, and change markers. Full finding payloads are not stored forever.',
-					'store-maintenance-checklist'
+					'store-maintenance-checklist-for-woocommerce'
 				) }
 			</p>
 
@@ -99,7 +99,7 @@ export default function HistoryPage( { onNavigate } ) {
 				<div className="stmc-danger-banner" role="alert">
 					<div className="stmc-banner-body">
 						<strong>
-							{ __( 'Error', 'store-maintenance-checklist' ) }
+							{ __( 'Error', 'store-maintenance-checklist-for-woocommerce' ) }
 						</strong>
 						<p>{ error }</p>
 					</div>
@@ -118,20 +118,20 @@ export default function HistoryPage( { onNavigate } ) {
 						{ latest?.score ?? '—' }
 					</div>
 					<div className="stmc-metric-label">
-						{ __( 'Latest score', 'store-maintenance-checklist' ) }
+						{ __( 'Latest score', 'store-maintenance-checklist-for-woocommerce' ) }
 					</div>
 					<div className="stmc-metric-sub">
 						{ latest?.provisional
 							? __(
 									'Provisional',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 							  ) + ' · '
 							: '' }
 						{ latest
 							? formatWhen( latest.timestamp )
 							: __(
 									'No scans yet',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 							  ) }
 					</div>
 				</div>
@@ -145,12 +145,12 @@ export default function HistoryPage( { onNavigate } ) {
 							: '—' }
 					</div>
 					<div className="stmc-metric-label">
-						{ __( 'New findings', 'store-maintenance-checklist' ) }
+						{ __( 'New findings', 'store-maintenance-checklist-for-woocommerce' ) }
 					</div>
 					<div className="stmc-metric-sub">
 						{ __(
 							'Since previous scan',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					</div>
 				</div>
@@ -165,12 +165,12 @@ export default function HistoryPage( { onNavigate } ) {
 						{ changes.resolved ?? '—' }
 					</div>
 					<div className="stmc-metric-label">
-						{ __( 'Resolved', 'store-maintenance-checklist' ) }
+						{ __( 'Resolved', 'store-maintenance-checklist-for-woocommerce' ) }
 					</div>
 					<div className="stmc-metric-sub">
 						{ __(
 							'No longer failing',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					</div>
 				</div>
@@ -180,12 +180,12 @@ export default function HistoryPage( { onNavigate } ) {
 				>
 					<div className="stmc-metric-value">{ items.length }</div>
 					<div className="stmc-metric-label">
-						{ __( 'Stored runs', 'store-maintenance-checklist' ) }
+						{ __( 'Stored runs', 'store-maintenance-checklist-for-woocommerce' ) }
 					</div>
 					<div className="stmc-metric-sub">
 						{ __(
 							'Cap 10 · oldest dropped next',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					</div>
 				</div>
@@ -195,7 +195,7 @@ export default function HistoryPage( { onNavigate } ) {
 				className="stmc-findings-panel"
 				aria-label={ __(
 					'Scan history',
-					'store-maintenance-checklist'
+					'store-maintenance-checklist-for-woocommerce'
 				) }
 			>
 				<div className="stmc-toolbar">
@@ -206,11 +206,11 @@ export default function HistoryPage( { onNavigate } ) {
 						onChange={ ( e ) => setSearch( e.target.value ) }
 						placeholder={ __(
 							'Search by date or environment…',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 						aria-label={ __(
 							'Search history',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					/>
 					<select
@@ -219,31 +219,31 @@ export default function HistoryPage( { onNavigate } ) {
 						onChange={ ( e ) => setEnv( e.target.value ) }
 						aria-label={ __(
 							'Filter by environment',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					>
 						<option value="all">
 							{ __(
 								'All environments',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</option>
 						<option value="local">
-							{ __( 'Local', 'store-maintenance-checklist' ) }
+							{ __( 'Local', 'store-maintenance-checklist-for-woocommerce' ) }
 						</option>
 						<option value="development">
 							{ __(
 								'Development',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</option>
 						<option value="staging">
-							{ __( 'Staging', 'store-maintenance-checklist' ) }
+							{ __( 'Staging', 'store-maintenance-checklist-for-woocommerce' ) }
 						</option>
 						<option value="production">
 							{ __(
 								'Production',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</option>
 					</select>
@@ -251,7 +251,7 @@ export default function HistoryPage( { onNavigate } ) {
 					<span className="stmc-history-compare-hint">
 						{ __(
 							'Compared to previous run',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					</span>
 				</div>
@@ -261,7 +261,7 @@ export default function HistoryPage( { onNavigate } ) {
 							className="stmc-section-desc"
 							style={ { padding: 16 } }
 						>
-							{ __( 'Loading…', 'store-maintenance-checklist' ) }
+							{ __( 'Loading…', 'store-maintenance-checklist-for-woocommerce' ) }
 						</p>
 					) : (
 						<table className="stmc-data-table">
@@ -270,49 +270,49 @@ export default function HistoryPage( { onNavigate } ) {
 									<th scope="col">
 										{ __(
 											'When',
-											'store-maintenance-checklist'
+											'store-maintenance-checklist-for-woocommerce'
 										) }
 									</th>
 									<th scope="col">
 										{ __(
 											'Score',
-											'store-maintenance-checklist'
+											'store-maintenance-checklist-for-woocommerce'
 										) }
 									</th>
 									<th scope="col">
 										{ __(
 											'Open',
-											'store-maintenance-checklist'
+											'store-maintenance-checklist-for-woocommerce'
 										) }
 									</th>
 									<th scope="col">
 										{ __(
 											'Critical',
-											'store-maintenance-checklist'
+											'store-maintenance-checklist-for-woocommerce'
 										) }
 									</th>
 									<th scope="col">
 										{ __(
 											'Warning',
-											'store-maintenance-checklist'
+											'store-maintenance-checklist-for-woocommerce'
 										) }
 									</th>
 									<th scope="col">
 										{ __(
 											'Info',
-											'store-maintenance-checklist'
+											'store-maintenance-checklist-for-woocommerce'
 										) }
 									</th>
 									<th scope="col">
 										{ __(
 											'Environment',
-											'store-maintenance-checklist'
+											'store-maintenance-checklist-for-woocommerce'
 										) }
 									</th>
 									<th scope="col">
 										{ __(
 											'Changes',
-											'store-maintenance-checklist'
+											'store-maintenance-checklist-for-woocommerce'
 										) }
 									</th>
 									<th scope="col" />
@@ -324,7 +324,7 @@ export default function HistoryPage( { onNavigate } ) {
 										<td colSpan={ 9 }>
 											{ __(
 												'No history entries yet.',
-												'store-maintenance-checklist'
+												'store-maintenance-checklist-for-woocommerce'
 											) }
 										</td>
 									</tr>
@@ -351,13 +351,13 @@ export default function HistoryPage( { onNavigate } ) {
 			<p className="stmc-footer-note">
 				{ __(
 					'History is stored in plugin options on this site only. Clearing history does not change live findings or ignores.',
-					'store-maintenance-checklist'
+					'store-maintenance-checklist-for-woocommerce'
 				) }
 			</p>
 
 			<Modal
 				isOpen={ clearOpen }
-				title={ __( 'Clear history', 'store-maintenance-checklist' ) }
+				title={ __( 'Clear history', 'store-maintenance-checklist-for-woocommerce' ) }
 				onClose={ () => {
 					if ( ! busy ) {
 						setClearOpen( false );
@@ -371,7 +371,7 @@ export default function HistoryPage( { onNavigate } ) {
 							onClick={ () => setClearOpen( false ) }
 							disabled={ busy }
 						>
-							{ __( 'Cancel', 'store-maintenance-checklist' ) }
+							{ __( 'Cancel', 'store-maintenance-checklist-for-woocommerce' ) }
 						</button>
 						<button
 							type="button"
@@ -382,11 +382,11 @@ export default function HistoryPage( { onNavigate } ) {
 							{ busy
 								? __(
 										'Clearing…',
-										'store-maintenance-checklist'
+										'store-maintenance-checklist-for-woocommerce'
 								  )
 								: __(
 										'Clear history',
-										'store-maintenance-checklist'
+										'store-maintenance-checklist-for-woocommerce'
 								  ) }
 						</button>
 					</>
@@ -395,7 +395,7 @@ export default function HistoryPage( { onNavigate } ) {
 				<p className="stmc-modal-lead">
 					{ __(
 						'Clear stored scan summaries on this site? Live findings and ignores are not changed.',
-						'store-maintenance-checklist'
+						'store-maintenance-checklist-for-woocommerce'
 					) }
 				</p>
 			</Modal>
@@ -422,7 +422,7 @@ function HistoryRow( { item, isLatest, onNavigate } ) {
 			<span key="new" className="stmc-change-pill stmc-change-pill--new">
 				{ sprintf(
 					/* translators: %d: new findings */
-					__( '%d new', 'store-maintenance-checklist' ),
+					__( '%d new', 'store-maintenance-checklist-for-woocommerce' ),
 					changes.new
 				) }
 			</span>
@@ -436,7 +436,7 @@ function HistoryRow( { item, isLatest, onNavigate } ) {
 			>
 				{ sprintf(
 					/* translators: %d: resolved findings */
-					__( '%d resolved', 'store-maintenance-checklist' ),
+					__( '%d resolved', 'store-maintenance-checklist-for-woocommerce' ),
 					changes.resolved
 				) }
 			</span>
@@ -450,7 +450,7 @@ function HistoryRow( { item, isLatest, onNavigate } ) {
 			>
 				{ sprintf(
 					/* translators: %d: worsened findings */
-					__( '%d worsened', 'store-maintenance-checklist' ),
+					__( '%d worsened', 'store-maintenance-checklist-for-woocommerce' ),
 					changes.worsened
 				) }
 			</span>
@@ -462,7 +462,7 @@ function HistoryRow( { item, isLatest, onNavigate } ) {
 				key="unchanged"
 				className="stmc-change-pill stmc-change-pill--unchanged"
 			>
-				{ __( 'Unchanged', 'store-maintenance-checklist' ) }
+				{ __( 'Unchanged', 'store-maintenance-checklist-for-woocommerce' ) }
 			</span>
 		);
 	}
@@ -473,15 +473,15 @@ function HistoryRow( { item, isLatest, onNavigate } ) {
 				<strong>{ formatWhen( item.timestamp ) }</strong>
 				<div className="stmc-finding-meta">
 					{ item.partial_catalog
-						? __( 'Partial catalog', 'store-maintenance-checklist' )
+						? __( 'Partial catalog', 'store-maintenance-checklist-for-woocommerce' )
 						: __(
 								'Full bounded pass',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 						  ) }
 					{ isLatest
 						? ` · ${ __(
 								'current',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 						  ) }`
 						: null }
 				</div>
@@ -494,7 +494,7 @@ function HistoryRow( { item, isLatest, onNavigate } ) {
 						<span className="stmc-pill">
 							{ __(
 								'Provisional',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 							) }
 						</span>
 					</>
@@ -517,11 +517,11 @@ function HistoryRow( { item, isLatest, onNavigate } ) {
 						className="stmc-btn-link"
 						onClick={ () => onNavigate( '/' ) }
 					>
-						{ __( 'View', 'store-maintenance-checklist' ) }
+						{ __( 'View', 'store-maintenance-checklist-for-woocommerce' ) }
 					</button>
 				) : (
 					<span className="stmc-finding-meta">
-						{ __( 'Summary', 'store-maintenance-checklist' ) }
+						{ __( 'Summary', 'store-maintenance-checklist-for-woocommerce' ) }
 					</span>
 				) }
 			</td>

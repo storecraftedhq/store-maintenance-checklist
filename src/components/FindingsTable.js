@@ -11,19 +11,19 @@ import { __, sprintf } from '@wordpress/i18n';
 import { formatEvidenceText, normalizeEvidenceSample } from '../utils/evidence';
 
 const AREA_LABELS = {
-	catalog: __( 'Catalog', 'store-maintenance-checklist' ),
-	payments: __( 'Payments', 'store-maintenance-checklist' ),
-	shipping: __( 'Shipping', 'store-maintenance-checklist' ),
-	email: __( 'Email', 'store-maintenance-checklist' ),
-	orders: __( 'Orders', 'store-maintenance-checklist' ),
-	environment: __( 'Environment', 'store-maintenance-checklist' ),
+	catalog: __( 'Catalog', 'store-maintenance-checklist-for-woocommerce' ),
+	payments: __( 'Payments', 'store-maintenance-checklist-for-woocommerce' ),
+	shipping: __( 'Shipping', 'store-maintenance-checklist-for-woocommerce' ),
+	email: __( 'Email', 'store-maintenance-checklist-for-woocommerce' ),
+	orders: __( 'Orders', 'store-maintenance-checklist-for-woocommerce' ),
+	environment: __( 'Environment', 'store-maintenance-checklist-for-woocommerce' ),
 };
 
 const CHANGE_LABELS = {
-	new: __( 'New', 'store-maintenance-checklist' ),
-	resolved: __( 'Resolved', 'store-maintenance-checklist' ),
-	unchanged: __( 'Unchanged', 'store-maintenance-checklist' ),
-	worsened: __( 'Worsened', 'store-maintenance-checklist' ),
+	new: __( 'New', 'store-maintenance-checklist-for-woocommerce' ),
+	resolved: __( 'Resolved', 'store-maintenance-checklist-for-woocommerce' ),
+	unchanged: __( 'Unchanged', 'store-maintenance-checklist-for-woocommerce' ),
+	worsened: __( 'Worsened', 'store-maintenance-checklist-for-woocommerce' ),
 };
 
 /**
@@ -32,12 +32,12 @@ const CHANGE_LABELS = {
  */
 function severityLabel( finding ) {
 	if ( finding.status === 'ignored' ) {
-		return __( 'Ignored', 'store-maintenance-checklist' );
+		return __( 'Ignored', 'store-maintenance-checklist-for-woocommerce' );
 	}
 	const map = {
-		critical: __( 'Critical', 'store-maintenance-checklist' ),
-		warning: __( 'Warning', 'store-maintenance-checklist' ),
-		info: __( 'Info', 'store-maintenance-checklist' ),
+		critical: __( 'Critical', 'store-maintenance-checklist-for-woocommerce' ),
+		warning: __( 'Warning', 'store-maintenance-checklist-for-woocommerce' ),
+		info: __( 'Info', 'store-maintenance-checklist-for-woocommerce' ),
 	};
 	return map[ finding.severity ] || finding.severity;
 }
@@ -85,7 +85,7 @@ export default function FindingsTable( {
 			className={
 				dimmed ? 'stmc-findings-panel is-dimmed' : 'stmc-findings-panel'
 			}
-			aria-label={ __( 'Findings', 'store-maintenance-checklist' ) }
+			aria-label={ __( 'Findings', 'store-maintenance-checklist-for-woocommerce' ) }
 		>
 			<div className="stmc-toolbar">
 				<input
@@ -95,11 +95,11 @@ export default function FindingsTable( {
 					onChange={ ( e ) => onSearch( e.target.value ) }
 					placeholder={ __(
 						'Search findings…',
-						'store-maintenance-checklist'
+						'store-maintenance-checklist-for-woocommerce'
 					) }
 					aria-label={ __(
 						'Search findings',
-						'store-maintenance-checklist'
+						'store-maintenance-checklist-for-woocommerce'
 					) }
 				/>
 				<select
@@ -108,11 +108,11 @@ export default function FindingsTable( {
 					onChange={ ( e ) => onArea( e.target.value ) }
 					aria-label={ __(
 						'Filter by area',
-						'store-maintenance-checklist'
+						'store-maintenance-checklist-for-woocommerce'
 					) }
 				>
 					<option value="all">
-						{ __( 'All areas', 'store-maintenance-checklist' ) }
+						{ __( 'All areas', 'store-maintenance-checklist-for-woocommerce' ) }
 					</option>
 					{ Object.entries( AREA_LABELS ).map( ( [ key, label ] ) => (
 						<option key={ key } value={ key }>
@@ -126,19 +126,19 @@ export default function FindingsTable( {
 					onChange={ ( e ) => onStatus( e.target.value ) }
 					aria-label={ __(
 						'Filter by status',
-						'store-maintenance-checklist'
+						'store-maintenance-checklist-for-woocommerce'
 					) }
 				>
 					<option value="open">
-						{ __( 'Open findings', 'store-maintenance-checklist' ) }
+						{ __( 'Open findings', 'store-maintenance-checklist-for-woocommerce' ) }
 					</option>
 					<option value="ignored">
-						{ __( 'Ignored', 'store-maintenance-checklist' ) }
+						{ __( 'Ignored', 'store-maintenance-checklist-for-woocommerce' ) }
 					</option>
 					<option value="all">
 						{ __(
 							'Open + ignored',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }
 					</option>
 				</select>
@@ -151,22 +151,22 @@ export default function FindingsTable( {
 							<th scope="col">
 								{ __(
 									'Severity',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</th>
 							<th scope="col">
 								{ __(
 									'Finding',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</th>
 							<th scope="col">
-								{ __( 'Area', 'store-maintenance-checklist' ) }
+								{ __( 'Area', 'store-maintenance-checklist-for-woocommerce' ) }
 							</th>
 							<th scope="col">
 								{ __(
 									'Actions',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</th>
 						</tr>
@@ -177,7 +177,7 @@ export default function FindingsTable( {
 								<td colSpan={ 4 }>
 									{ __(
 										'No findings match the current filters.',
-										'store-maintenance-checklist'
+										'store-maintenance-checklist-for-woocommerce'
 									) }
 								</td>
 							</tr>
@@ -275,7 +275,7 @@ function FindingRow( { finding, showFurtherTools, onIgnore, onRestore } ) {
 									/* translators: %s: ignore reason */
 									__(
 										'Reason: “%s”',
-										'store-maintenance-checklist'
+										'store-maintenance-checklist-for-woocommerce'
 									),
 									finding.ignore_reason
 								) }
@@ -287,7 +287,7 @@ function FindingRow( { finding, showFurtherTools, onIgnore, onRestore } ) {
 					<p className="stmc-finding-further">
 						{ __(
 							'Optional further tools:',
-							'store-maintenance-checklist'
+							'store-maintenance-checklist-for-woocommerce'
 						) }{ ' ' }
 						{ tools.map( ( tool, i ) => (
 							<span key={ tool.url || tool.label || i }>
@@ -309,7 +309,7 @@ function FindingRow( { finding, showFurtherTools, onIgnore, onRestore } ) {
 					{ finding.score_excluded
 						? ` · ${ __(
 								'Excluded from score',
-								'store-maintenance-checklist'
+								'store-maintenance-checklist-for-woocommerce'
 						  ) }`
 						: null }
 				</p>
@@ -325,7 +325,7 @@ function FindingRow( { finding, showFurtherTools, onIgnore, onRestore } ) {
 							className="stmc-btn-link"
 							onClick={ () => onRestore( finding.id ) }
 						>
-							{ __( 'Restore', 'store-maintenance-checklist' ) }
+							{ __( 'Restore', 'store-maintenance-checklist-for-woocommerce' ) }
 						</button>
 					) : (
 						<>
@@ -343,7 +343,7 @@ function FindingRow( { finding, showFurtherTools, onIgnore, onRestore } ) {
 									{ finding.primary_action.label ||
 										__(
 											'Open',
-											'store-maintenance-checklist'
+											'store-maintenance-checklist-for-woocommerce'
 										) }
 								</a>
 							) : null }
@@ -354,7 +354,7 @@ function FindingRow( { finding, showFurtherTools, onIgnore, onRestore } ) {
 							>
 								{ __(
 									'Ignore…',
-									'store-maintenance-checklist'
+									'store-maintenance-checklist-for-woocommerce'
 								) }
 							</button>
 						</>

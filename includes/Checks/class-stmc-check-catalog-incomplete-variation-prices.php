@@ -26,7 +26,7 @@ final class STMC_Check_Catalog_Incomplete_Variation_Prices extends STMC_Check_Ba
 	}
 
 	public function title(): string {
-		return __( 'Variable products with incomplete variation prices', 'store-maintenance-checklist' );
+		return __( 'Variable products with incomplete variation prices', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {

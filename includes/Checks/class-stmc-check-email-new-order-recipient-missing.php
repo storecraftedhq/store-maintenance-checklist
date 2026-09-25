@@ -41,7 +41,7 @@ final class STMC_Check_Email_New_Order_Recipient_Missing extends STMC_Check_Base
 	 * {@inheritdoc}
 	 */
 	public function title(): string {
-		return __( 'New order recipient missing', 'store-maintenance-checklist' );
+		return __( 'New order recipient missing', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	/**
@@ -55,12 +55,12 @@ final class STMC_Check_Email_New_Order_Recipient_Missing extends STMC_Check_Base
 		}
 		return $this->open(
 			$snapshot,
-			__( 'New order alerts go nowhere without a recipient.', 'store-maintenance-checklist' ),
+			__( 'New order alerts go nowhere without a recipient.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
-				'summary' => __( 'New order recipient is empty.', 'store-maintenance-checklist' ),
+				'summary' => __( 'New order recipient is empty.', 'store-maintenance-checklist-for-woocommerce' ),
 				'count'   => 1,
 			),
-			__( 'Emails', 'store-maintenance-checklist' ),
+			__( 'Emails', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-settings&tab=email&section=new_order'
 		);
 	}

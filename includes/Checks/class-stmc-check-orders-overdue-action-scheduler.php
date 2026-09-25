@@ -26,7 +26,7 @@ final class STMC_Check_Orders_Overdue_Action_Scheduler extends STMC_Check_Base {
 	}
 
 	public function title(): string {
-		return __( 'Overdue pending Action Scheduler jobs', 'store-maintenance-checklist' );
+		return __( 'Overdue pending Action Scheduler jobs', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -36,16 +36,16 @@ final class STMC_Check_Orders_Overdue_Action_Scheduler extends STMC_Check_Base {
 		}
 		return $this->open(
 			$snapshot,
-			__( 'Cron or queue lag: pending actions past their scheduled date.', 'store-maintenance-checklist' ),
+			__( 'Cron or queue lag: pending actions past their scheduled date.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: %d: overdue count */
-					__( '%d overdue pending Action Scheduler jobs.', 'store-maintenance-checklist' ),
+					__( '%d overdue pending Action Scheduler jobs.', 'store-maintenance-checklist-for-woocommerce' ),
 					$count
 				),
 				'count'   => $count,
 			),
-			__( 'Scheduled Actions', 'store-maintenance-checklist' ),
+			__( 'Scheduled Actions', 'store-maintenance-checklist-for-woocommerce' ),
 			'admin.php?page=wc-status&tab=action-scheduler&status=past-due'
 		);
 	}

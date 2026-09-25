@@ -28,7 +28,7 @@ final class STMC_Check_Environment_Wp_Below_Recommended extends STMC_Check_Base 
 	}
 
 	public function title(): string {
-		return __( 'WordPress version below WooCommerce recommendation', 'store-maintenance-checklist' );
+		return __( 'WordPress version below WooCommerce recommendation', 'store-maintenance-checklist-for-woocommerce' );
 	}
 
 	public function evaluate( STMC_Check_Snapshot $snapshot ): array {
@@ -38,17 +38,17 @@ final class STMC_Check_Environment_Wp_Below_Recommended extends STMC_Check_Base 
 		}
 		return $this->open(
 			$snapshot,
-			__( 'WooCommerce recommends WordPress 6.9 or greater for security and compatibility.', 'store-maintenance-checklist' ),
+			__( 'WooCommerce recommends WordPress 6.9 or greater for security and compatibility.', 'store-maintenance-checklist-for-woocommerce' ),
 			array(
 				'summary' => sprintf(
 					/* translators: 1: current WordPress version, 2: recommended minimum */
-					__( 'WordPress %1$s is below the recommended minimum of %2$s.', 'store-maintenance-checklist' ),
+					__( 'WordPress %1$s is below the recommended minimum of %2$s.', 'store-maintenance-checklist-for-woocommerce' ),
 					$version,
 					self::MIN_VERSION
 				),
 				'count'   => 1,
 			),
-			__( 'Updates', 'store-maintenance-checklist' ),
+			__( 'Updates', 'store-maintenance-checklist-for-woocommerce' ),
 			'update-core.php'
 		);
 	}
